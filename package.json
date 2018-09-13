@@ -1,0 +1,15 @@
+{
+  "name": "hanayuri",
+  "version": "1.0.0",
+  "description": "Discord bot (Martijn Steenks)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martijn Steenks",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "npm": "^6.3.0"
+  }
+}
