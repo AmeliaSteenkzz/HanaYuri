@@ -13,6 +13,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("h!ping", "shows the response time of the bot")
   .addField("[staff only] h!addrole @someone role", "gives someone a role")
   .addField("[staff only] h!removerole @someone role", "removes a role from someone")
+  .addField("[staff only] h!warn @someone", "warn someone. the more warnings the person has, the bigger the punishment")
   .addField("[staff only] h!tempmute @someone time", "mute a person from the chat for a set ammount of time")
   .addField("[staff only] h!kick @someone reason", "kick a person from the server")
   .addField("[staff only] h!ban @someone reason", "ban a person from the server");
