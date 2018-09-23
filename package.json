@@ -9,6 +9,7 @@
   "author": "Martijn Steenks",
   "license": "ISC",
   "dependencies": {
+    "ms": "^2.1.1",
     "discord.js": "^11.4.2",
     "npm": "^6.3.0"
   }
