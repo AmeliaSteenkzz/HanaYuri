@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   let userembed = new Discord.RichEmbed()
   .setDescription("User Information")
   .setColor("#ff70ff")
-  .addField("Full Username", `@${message.author.tag}`)
+  .addField("Full Username", `${message.author.tag}`)
   .addField("User ID", message.author.id)
   .addField("Created At", message.author.createdAt);
 
