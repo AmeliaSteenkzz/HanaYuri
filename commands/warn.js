@@ -41,7 +41,7 @@ module.exports.run = async (bot, message, args) => {
 
     let mutetime = "10m";
     await(wUser.addRole(muterole.id));
-    message.channel.send(`<@${wUser.id}> has been temporarily muted`);
+    message.channel.send(`<@${wUser.id}> has been temporarily muted for 10 minutes`);
 
     setTimeout(function(){
       wUser.removeRole(muterole.id)
