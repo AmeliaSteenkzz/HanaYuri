@@ -6,6 +6,7 @@ module.exports.run = async (bot, message, args) => {
   .setDescription("Command List")
   .setColor("#ff70ff")
   .addField("h!help", "shows a list of all the commands")
+  .addField("h!rules1/2/3/4", "shows the rules and laws of the server")
   .addField("h!report @someone reason", "report someone in the server")
   .addField("h!serverinfo", "info about the server")
   .addField("h!botinfo", "info about the bot")
