@@ -3,15 +3,15 @@ const superagent = require("superagent");
 
 module.exports.run = async (bot,messages,args) => {
 
-  let response = await superagent.get(`https://random.dog/woof.json`);
+  let response = await superagent.get(`http://aws.random.cat//meow`);
   let dogembed = new Discord.RichEmbed()
 
   .setColor("#ff70ff")
-  .setTitle("Doggo :dog:")
-  .setImage(response.body.url);
+  .setTitle("Cat :cat:")
+  .setImage(response.body.file);
 
   messages.channel.send(dogembed);
 }
 module.exports.help = {
-  name: "doggo"
+  name: "cat"
 }
