@@ -12,12 +12,14 @@ module.exports.run = async (bot, message, args) => {
   .addField("h!botinfo", "info about the bot")
   .addField("h!userinfo", "info about the user")
   .addField("h!ping", "shows the response time of the bot")
+  .addField("h!cat", "shows a random cat picture")
+  .addField("h!doggo", "shows a random doggo picture")
   .addField("[staff only] h!addrole @someone role", "gives someone a role")
   .addField("[staff only] h!removerole @someone role", "removes a role from someone")
   .addField("[staff only] h!warn @someone", "warn someone. the more warnings the person has, the bigger the punishment")
   .addField("[staff only] h!tempmute @someone time", "mute a person from the chat for a set ammount of time")
-  .addField("[staff only] h!kick @someone reason", "kick a person from the server")
-  .addField("[staff only] h!ban @someone reason", "ban a person from the server");
+  .addField("~~[staff only] h!kick @someone reason~~", "removed due to safety measures")
+  .addField("~~[staff only] h!ban @someone reason~~", "removed due to safety measures");
   
   message.channel.send(helpembed);
 }
