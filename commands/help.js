@@ -6,6 +6,7 @@ module.exports.run = async (bot, message, args) => {
   .setDescription("Command List")
   .setColor("#ff70ff")
   .addField("h!help", "shows a list of all the commands")
+  .addField("h!bots", "shows a list of all the bots and prefixes in the server")
   .addField("h!rules1/2/3/4", "shows the rules and laws of the server")
   .addField("h!report @someone reason", "report someone in the server")
   .addField("h!serverinfo", "info about the server")
@@ -18,8 +19,6 @@ module.exports.run = async (bot, message, args) => {
   .addField("[staff only] h!removerole @someone role", "removes a role from someone")
   .addField("[staff only] h!warn @someone", "warn someone. the more warnings the person has, the bigger the punishment")
   .addField("[staff only] h!tempmute @someone time", "mute a person from the chat for a set ammount of time")
-  .addField("~~[staff only] h!kick @someone reason~~", "removed due to safety measures")
-  .addField("~~[staff only] h!ban @someone reason~~", "removed due to safety measures");
   
   message.channel.send(helpembed);
 }
