@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
   let staffhelpembed = new Discord.RichEmbed()
   .setDescription("Staff Command List")
-  .setColor("#ff70ff")
+  .setColor("#af0e97")
   .addField("h!staffhelp", "shows a list of all staff commands")
   .addField("h!say {text}", "let Hanayuri say something")
   .addField("h!clear {number}", "delete an ammount of messages in the chat")
