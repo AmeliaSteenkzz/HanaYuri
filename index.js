@@ -93,4 +93,4 @@ if(!coinschannel) return message.channel.send("Couldn't find coins channel.");
 coinschannel.send(coinEmbed);
 }});
 
-bot.login(botconfig.token);
+bot.login(process.env.token);
