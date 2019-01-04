@@ -15,6 +15,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("h!ping", "shows the response time of the bot")
   .addField("h!cat", "shows a random cat picture")
   .addField("h!doggo", "shows a random doggo picture")
+  .addField("h!coins", "shows how much coins you have")
   
   message.channel.send(helpembed);
 }
