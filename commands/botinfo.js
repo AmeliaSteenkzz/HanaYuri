@@ -6,12 +6,14 @@ module.exports.run = async (bot, message, args) => {
   let bicon = bot.user.displayAvatarURL;
   let botembed = new Discord.RichEmbed()
   .setDescription("Bot Information")
-  .setColor("#ff70ff")
+  .setColor("#af0e97")
   .setThumbnail(bicon)
-  .addField("Bot Name", bot.user.username)
-  .addField("Bot ID", bot.user.id)
+  .addField("Bot Name", bot.user.username, true)
+  .addField("Creator", message.guild.owner, true)
+  .addField("Prefix", "h!", true)
+  .addField("Bot ID", bot.user.id, true)
   .addField("Created On", bot.user.createdAt)
-  .addField("Servers", bot.guilds.size);
+  .addField("Servers", message.guild.name);
 
   message.channel.send(botembed);
 
