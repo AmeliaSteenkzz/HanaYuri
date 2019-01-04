@@ -30,24 +30,6 @@ bot.on("ready", async () => {
 
 });
 
-bot.on("guildMemberAdd", async member => {
-  console.log(`${member.id} joined the server.`);
-
-  let welcomechannel = member.guild.channels.find(`name`, "staff_bot_commands");
-  welcomechannel.send(`${member} has joined the server.`);
-});
-
-bot.on("channelCreate", async channel => {
-
-  console.log(`${channel.name} has been created.`);
-
-  let logsEmbed = new Discord.RichEmbed()
-  let sChannel = channel.guild.channels.find(`name`, "test");
-  sChannel.send(logsEmbed);
-  sChannel.send(`${channel} has been created`);
-
-});
-
 bot.on("message", async message => {
 
   if(message.author.bot) return;
