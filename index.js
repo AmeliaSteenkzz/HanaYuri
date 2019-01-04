@@ -85,7 +85,7 @@ fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
 let coinEmbed = new Discord.RichEmbed()
 .setAuthor(message.author.username)
 .setColor("#ff70ff")
-.addField("💰", `${coinAmt} coins added!`);
+.addField("➕", `${coinAmt} coins added!💰`)
 
 if(message.author.bot) return;
 let coinschannel = message.guild.channels.find(`name`, "coins");
