@@ -5,13 +5,17 @@ module.exports.run = async (bot, message, args) => {
   console.log('Pong!')
   startTime = Date.now()
 
-  message.channel.send(":ping_pong: Pong!").then((message) => {
+  message.channel.send("Calculating...").then((message) => {
     endTime = Date.now()
 
     let ping = Math.round(endTime - startTime)
     let rounded = ping / 1000
 
-    message.channel.send(` ${ping} ms | ${rounded} seconds.`);
+    let pingembed = new Discord.RichEmbed()
+    .setColor("#af0e97")
+    .addField(":ping_pong: Pong!", `${ping} ms | ${rounded} seconds.`);
+
+    message.channel.send(pingembed);
   });
 }
 module.exports.help = {
