@@ -13,7 +13,7 @@ module.exports.run = async (bot,message,args) => {
   await(rMember.removeRole(gRole.id));
 
 try{
-  await rMember.send(`That's too bad, you lost the ${gRole.name} role`)
+  await rMember.send(`Your ${gRole.name} has expired.`)
 }catch(e){
   message.channel.send(`Removed ${gRole.name} from <@${rMember.id}>`)
   }
