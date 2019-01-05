@@ -10,7 +10,8 @@ module.exports.run = async (bot, message, args) => {
       let reason = args.join(" ").slice(22);
       let reportEmbed = new Discord.RichEmbed()
       .setDescription("Reports")
-      .setColor("#af0e97")
+      .setColor("#ff8600")
+      .setThumbnail(rUser.user.displayAvatarURL)
       .addField("Reported User", `${rUser} ID: ${rUser.id}`)
       .addField("Reported By", `${message.author} ID: ${message.author.id}`)
       .addField("Channel", message.channel)
@@ -21,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
       .setTitle("Your report has been recieved!")
       .setColor("#af0e97");
 
-      let reportschannel = message.guild.channels.find(`name`, "other_logs");
+      let reportschannel = message.guild.channels.find(c => c.name === "other_logs");
       if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
       message.delete().catch(O_o=>{});
       reportschannel.send(reportEmbed).then(msg => message.channel.send(reporterEmbed));
