@@ -17,6 +17,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("h!halloffame", "shows the Hall Of Fame")
   .addField("h!staff", "shows all current staff members")
   .addField("h!ping", "shows the response time of the bot")
+  .addField("h!8ball question", "ask Hanayuri a random question")
   .addField("h!cat", "shows a random cat picture")
   .addField("h!doggo", "shows a random doggo picture")
   
