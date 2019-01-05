@@ -34,7 +34,7 @@ module.exports.run = async (bot, message, args) => {
   .setColor("#af0e97")
   .addField("h!8ball", "ask Hanayuri a question")
   .addField("h!cat", "shows a random cat picture")
-  .addField("dogembed", "shows a random doggo picture");
+  .addField("h!doggo", "shows a random doggo picture");
 
   let othersembed = new Discord.RichEmbed()
   .setTitle("Others Command List")
