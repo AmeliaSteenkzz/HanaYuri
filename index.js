@@ -44,6 +44,6 @@ bot.on("message", async message => {
   if(commandfile) commandfile.run(bot,message,args);
 
   });
-}});
+});
 
 bot.login(process.env.token);
