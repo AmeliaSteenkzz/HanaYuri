@@ -235,7 +235,7 @@ bot.on("messageDelete", async message => {
 bot.on("messageUpdate", async (oldMessage, newMessage) => {
 
   if((!oldMessage.content || !newMessage.content) || (oldMessage.content === newMessage.content)) return;
-  if(oldMessage.author.bot) return;
+  if(newMessage.author.bot) return;
   let sicon = newMessage.author.displayAvatarURL;
   let messageupdateEmbed = new Discord.RichEmbed()
   .setAuthor(`Message Edited by ${newMessage.author.username}`, sicon)
