@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Staff", "moderations for staff members", true)
   .setFooter("Usage: h!help {category name}");
 
-  if(!args[0]) return message.reply(helpCembed);
+  if(!args[0]) return message.channel.send(helpCembed);
   let question = args.slice(1).join(" ");
 
   let infoembed = new Discord.RichEmbed()
