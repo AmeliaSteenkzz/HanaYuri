@@ -240,8 +240,8 @@ bot.on("messageUpdate", async (oldMessage, newMessage) => {
   .setAuthor(`Message Edited by ${newMessage.author.username}`, sicon)
   .setColor("#530447")
   .setThumbnail(newMessage.author.displayAvatarURL)
-  .addField("Before", oldMessage)
-  .addField("After", newMessage)
+  .addField("Before:", oldMessage)
+  .addField("After:", newMessage)
   .addField("Original Date:", oldMessage.createdAt)
   .setFooter(`ID: ${newMessage.author.id}`)
   .setTimestamp(oldMessage.deletedAt);
