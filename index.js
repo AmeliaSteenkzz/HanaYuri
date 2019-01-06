@@ -218,12 +218,13 @@ bot.on("guildUpdate", async (oldGuild, newGuild) => {
 
 bot.on("messageDelete", async message => {
 
-  if(message.delete.bot) return;
+  if(message.author.bot) return;
   let sicon = message.author.displayAvatarURL;
   let messagedeleteEmbed = new Discord.RichEmbed()
   .setAuthor(`Deleted Message by ${message.author.username}`, sicon)
   .setColor("#530447")
   .setThumbnail(message.author.displayAvatarURL)
+  .setDescription(`Deleted in channel ${message.channel}`)
   .addField("Message:", message)
   .addField("Original Date:", message.createdAt)
   .setFooter(`ID: ${message.author.id}`)
@@ -242,6 +243,7 @@ bot.on("messageUpdate", async (oldMessage, newMessage) => {
   .setAuthor(`Message Edited by ${newMessage.author.username}`, sicon)
   .setColor("#530447")
   .setThumbnail(newMessage.author.displayAvatarURL)
+  .setDescription(`Edited in channel ${newMessage.channel}`)
   .addField("Before:", oldMessage)
   .addField("After:", newMessage)
   .addField("Original Date:", oldMessage.createdAt)
