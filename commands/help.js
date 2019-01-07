@@ -36,7 +36,7 @@ module.exports.run = async (bot, message, args) => {
   .setThumbnail("https://cdn.discordapp.com/attachments/486583639253975042/531132326638387201/b8316909587b624d18cd4c52b27c653e.png")
   .addField("h!8ball", "ask Hanayuri a question")
   .addField("h!cat", "shows a random cat picture")
-  .addField("dogembed", "shows a random doggo picture");
+  .addField("h!doggo", "shows a random doggo picture");
 
   let othersembed = new Discord.RichEmbed()
   .setDescription("Others Command List")
