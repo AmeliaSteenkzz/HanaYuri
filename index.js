@@ -272,7 +272,7 @@ bot.on("roleDelete", async role => {
 
   let sicon = role.guild.iconURL;
   let roledeleteEmbed = new Discord.RichEmbed()
-  .setAuthor(`Role Created`, sicon)
+  .setAuthor(`Role Deleted`, sicon)
   .setColor("#ff00d6")
   .setThumbnail(role.guild.iconURL)
   .addField("Role Name", role)
