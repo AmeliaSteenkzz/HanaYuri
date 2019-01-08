@@ -218,7 +218,6 @@ bot.on("guildUpdate", async (oldGuild, newGuild) => {
 
 bot.on("messageDelete", async message => {
 
-  if(message.author.bot) return;
   let sicon = message.author.displayAvatarURL;
   let messagedeleteEmbed = new Discord.RichEmbed()
   .setAuthor(`Deleted Message by ${message.author.username}`, sicon)
