@@ -253,6 +253,52 @@ bot.on("messageUpdate", async (oldMessage, newMessage) => {
   sChannel.send(messageupdateEmbed);
 })
 
+bot.on("roleCreate", async role => {
+
+  let sicon = role.guild.iconURL;
+  let rolecreateEmbed = new Discord.RichEmbed()
+  .setAuthor("Role Created", sicon)
+  .setColor("#ff00d6")
+  .setThumbnail(role.guild.iconURL)
+  .addField("Role Name", role)
+  .setFooter(`ID: ${role.id}`)
+  .setTimestamp(role.createdAt);
+
+  let sChannel = role.guild.channels.find(c => c.name === "staff_bot_commands");
+  sChannel.send(rolecreateEmbed);
+})
+
+bot.on("roleDelete", async role => {
+
+  let sicon = role.guild.iconURL;
+  let roledeleteEmbed = new Discord.RichEmbed()
+  .setAuthor(`Role Created`, sicon)
+  .setColor("#ff00d6")
+  .setThumbnail(role.guild.iconURL)
+  .addField("Role Name", role)
+  .setFooter(`ID: ${role.id}`)
+  .setTimestamp(role.deletedAt);
+
+  let sChannel = role.guild.channels.find(c => c.name === "staff_bot_commands");
+  sChannel.send(roledeleteEmbed);
+})
+
+bot.on("roleUpdate", async (oldRole, newRole) => {
+
+  let sicon = newRole.guild.iconURL;
+  let roleupdateEmbed = new Discord.RichEmbed()
+  .setAuthor(`Role Updated`, sicon)
+  .setColor("#ff00d6")
+  .setThumbnail(newRole.guild.iconURL)
+  .addField("Old Role Name:", oldRole.name)
+  .addField("New Role Name:", newRole.name)
+  .setFooter(`ID: ${newRole.id}`)
+  .setTimestamp(oldRole.updatedAt);
+
+  let sChannel = newRole.guild.channels.find(c => c.name === "staff_bot_commands");
+  sChannel.send(roleupdateEmbed);
+})
+
 bot.on("message", async message => {
 
   if(message.author.bot) return;
