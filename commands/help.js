@@ -50,6 +50,7 @@ module.exports.run = async (bot, message, args) => {
   .setThumbnail("https://cdn.discordapp.com/attachments/486583639253975042/531134577675337748/wrench-512.png")
   .addField("h!say", "let Hanayuri say something")
   .addField("h!clear", "delete an ammount of messages in the chat")
+  .addField("h!prefix", "change the prefix of Hanayuri")
   .addField("h!addrole", "give someone a role")
   .addField("h!removerole", "remove a role from someone")
   .addField("h!warn", "warns someone. The more warnings, the bigger the punishment")
