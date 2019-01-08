@@ -264,7 +264,7 @@ bot.on("roleCreate", async role => {
   .setFooter(`ID: ${role.id}`)
   .setTimestamp(role.createdAt);
 
-  let sChannel = role.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = role.guild.channels.find(c => c.name === "other_logs");
   sChannel.send(rolecreateEmbed);
 })
 
@@ -279,7 +279,7 @@ bot.on("roleDelete", async role => {
   .setFooter(`ID: ${role.id}`)
   .setTimestamp(role.deletedAt);
 
-  let sChannel = role.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = role.guild.channels.find(c => c.name === "other_logs");
   sChannel.send(roledeleteEmbed);
 })
 
@@ -295,7 +295,7 @@ bot.on("roleUpdate", async (oldRole, newRole) => {
   .setFooter(`ID: ${newRole.id}`)
   .setTimestamp(oldRole.updatedAt);
 
-  let sChannel = newRole.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = newRole.guild.channels.find(c => c.name === "other_logs");
   sChannel.send(roleupdateEmbed);
 })
 
