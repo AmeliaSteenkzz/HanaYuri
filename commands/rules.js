@@ -7,10 +7,10 @@ module.exports.run = async (bot, message, args) => {
     .setDescription("Please choose a category")
     .setColor("#af0e97")
     .setThumbnail(sicon)
-    .addField("1", "Rules about fights and drama")
-    .addField("2", "Rules about behavior")
-    .addField("3", "Rules about using channels")
-    .addField("4", "Rules about nsfw")
+    .addField("1", "Rules about fights and drama", true)
+    .addField("2", "Rules about behavior", true)
+    .addField("3", "Rules about using channels", true)
+    .addField("4", "Rules about nsfw", true)
     .setFooter("Usage: h!rules {category number}");
 
     if(!args[0]) return message.channel.send(rulesembed);
