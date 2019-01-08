@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     let sicon = message.guild.iconURL;
     let rulesembed = new Discord.RichEmbed()
     .setDescription("Please choose a category")
-    .setColor("#ff70ff")
+    .setColor("#af0e97")
     .setThumbnail(sicon)
     .addField("1", "Rules about fights and drama")
     .addField("2", "Rules about behavior")
@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
 
     let rules1embed = new Discord.RichEmbed()
     .setDescription("Do not keep all drama and fights in the server.")
-    .setColor("#ff70ff")
+    .setColor("#af0e97")
     .setThumbnail(sicon)
     .addField("1.A", "Do that in Private Messages. if you continue with the drama or the fight, then you'll be muted.")
     .addField("1.B", "Likewise, don't bring needless personal- or DM drama into the server.")
@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
 
     let rules2embed = new Discord.RichEmbed()
     .setDescription("Have respect and be nice to everyone")
-    .setColor("#ff70ff")
+    .setColor("#af0e97")
     .setThumbnail(sicon)
     .addField("2.A", "Cursing is allowed, but bullying, threatening, stalking, or using someone for your own needs isnt. Basically don't be a dick.")
     .addField("2.B", "Using racist words is allowed. Can't believe I have to put this in here. It's the internet, what do you expect.")
@@ -40,7 +40,7 @@ module.exports.run = async (bot, message, args) => {
 
     let rules3embed = new Discord.RichEmbed()
     .setDescription("Keep the content in the right channels.")
-    .setColor("#ff70ff")
+    .setColor("#af0e97")
     .setThumbnail(sicon)
     .addField("3.A", "No spamming, trolling, bullshitting or trash talking.")
     .addField("3.B", "It's not allowed to use bot commands in normal chats.")
@@ -49,7 +49,7 @@ module.exports.run = async (bot, message, args) => {
 
     let rules4embed = new Discord.RichEmbed()
     .setDescription("All kinds of hentai will be posted in the nsfw channels")
-    .setColor("#ff70ff")
+    .setColor("#af0e97")
     .setThumbnail(sicon)
     .addField("4.A", "Keep the NSFW content in the NSFW marked channels.")
     .addField("4.B", "No Gore, Guro, Vore, Pedophilia, Necrophiliac or other weird disgusting shit.")
