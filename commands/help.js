@@ -42,7 +42,8 @@ module.exports.run = async (bot, message, args) => {
   .setDescription("Others Command List")
   .setColor("#af0e97")
   .setThumbnail("https://cdn.discordapp.com/attachments/486583639253975042/531133221992398868/854145.png")
-  .addField("h!report", "report someone in the server");
+  .addField("h!report", "report someone in the server")
+  .addField("h!avatar", "get the avatar of a user in a URL");
 
   let staffhelpembed = new Discord.RichEmbed()
   .setDescription("Staff Command List")
