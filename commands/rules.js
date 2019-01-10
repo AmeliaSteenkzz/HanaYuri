@@ -35,7 +35,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("2.D", "Do not send unwanted nudes in DMs to people. If you do send unwanted nudes, then we're forced to remove you from the server.")
     .addField("2.E", "Continuation of intended spam or being annoying leads to a mute or more if continued.")
     .addField("2.F", "If we find out you take part in Pedophilia like actions in real life, we are forced to remove you from the server.")
-    .addField("2.G", "Do not pretend to be someone else. Aka identity theft or catfishing. This could lead to a ban.")
+    .addField("2.G", "Do not use double accounts to pretend like someone else, boost your ego, or pretend you're the opposite gender.")
     .setFooter(`requested by ${message.author.tag}`, message.author.displayAvatarURL);
 
     let rules3embed = new Discord.RichEmbed()
