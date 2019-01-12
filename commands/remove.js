@@ -549,12 +549,16 @@ if(args[0] === 'transgender') {
   message.channel.send(removeEmbed);
   memberRoleAdd.removeRolee(roleTransgender).catch(console.error);
 }
-if(args[0] === 'Apache Helicopter') {
+if(args[0] === 'Apache') {
+  if (!args[1]) return;
+  if (args[1] === 'Helicopter') {
   if(memberRoleAdd.roles.has(!roleApacheHelicopter.id)) return message.channel.send(alreadyEmbed);
   message.channel.send(removeEmbed);
   memberRoleAdd.removeRole(roleApacheHelicopter).catch(console.error);
 }
-if(args[0] === 'apache helicopter') {
+if(args[0] === 'apache') {
+  if (!args[1]) return;
+  if (args[1] === 'helicopter') {
   if(memberRoleAdd.roles.has(!roleApacheHelicopter.id)) return message.channel.send(alreadyEmbed);
   message.channel.send(removeEmbed);
   memberRoleAdd.removeRole(roleApacheHelicopter).catch(console.error);
