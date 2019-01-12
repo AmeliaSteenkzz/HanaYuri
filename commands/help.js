@@ -28,6 +28,8 @@ module.exports.run = async (bot, message, args) => {
   .addField("h!vips", "shows all VIP packs for donators")
   .addField("h!halloffame", "shows everyone in the Hall Of Fame")
   .addField("h!staff", "shows all current staff members")
+  .addField("h!colors", "shows a list of all available colors that you can add")
+  .addField("h!roles", "shows a list of all available extra roles that you can add")
   .addField("h!ping", "shows the response time of Hanayuri");
 
   let funembed = new Discord.RichEmbed()
@@ -42,6 +44,8 @@ module.exports.run = async (bot, message, args) => {
   .setDescription("Others Command List")
   .setColor("#af0e97")
   .setThumbnail("https://cdn.discordapp.com/attachments/486583639253975042/531133221992398868/854145.png")
+  .addField("h!add", "add a role or color to yourself")
+  .addField("h!remove", "remove a role or color from yourself")
   .addField("h!report", "report someone in the server")
   .addField("h!avatar", "get the avatar of a user in a URL");
 
