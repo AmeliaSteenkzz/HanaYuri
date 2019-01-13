@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("h!colors", "shows a list of all available colors that you can add")
   .addField("h!roles", "shows a list of all available extra roles that you can add")
   .addField("h!level", "check your current level and EXP")
-  .addField("h!level", "check your current level and EXP")
+  .addField("h!rank", "check your current level and EXP")
   .addField("h!ping", "shows the response time of Hanayuri");
 
   let funembed = new Discord.RichEmbed()
