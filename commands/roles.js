@@ -10,6 +10,7 @@ module.exports.run = async (bot,messages,args) => {
   .setThumbnail(sicon)
   .addField("Info", "Male\nFemale\nTransgender\nStraight\nHomosexual\nBisexual\nAsexual\nSingle\nTaken\nDom\nSub\nSwitch\nLevel Block", true)
   .addField("Likes", "Vanilla\nFetish\nAhegao\nFuta\nTentacles\nNeko\nLoli\nThicc\nBDSM\nFurry\nYuri\nYaoi", true)
+  .addField("Other", "Event", true)
   .setFooter("To add a role, use the command h!add {role}");
 
   messages.channel.send(rolesEmbed);
