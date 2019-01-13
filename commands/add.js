@@ -67,6 +67,7 @@ let roleFurry = message.guild.roles.find(r => r.name === "Furry");
 let roleYuri = message.guild.roles.find(r => r.name === "Yuri");
 let roleYaoi = message.guild.roles.find(r => r.name === "Yaoi");
 let roleLevelBlock = message.guild.roles.find(r => r.name === "Level Block");
+let roleEvent = message.guild.roles.find(r => r.name === "Event Attendee"
 let memberRoleAdd = message.member;
 
 if(args[0] === 'cyancolor') {
@@ -696,6 +697,16 @@ if(args[0] === 'level') {
   if(memberRoleAdd.roles.has(roleLevelBlock.id)) return message.channel.send(alreadyEmbed);
   message.channel.send(addEmbed);
   memberRoleAdd.addRole(roleLevelBlock).catch(console.error);
+}}
+if(args[0] === 'event') {
+  if(memberRoleAdd.roles.has(roleEvent.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleEvent).catch(console.error);
+}}
+if(args[0] === 'Event') {
+  if(memberRoleAdd.roles.has(roleEvent.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleEvent).catch(console.error);
 }}
 
 }
