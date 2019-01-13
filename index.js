@@ -348,7 +348,7 @@ if(nxtLvl <= xp[message.author.id].xp){
   xp[message.author.id].xp = 0;
 
   if(message.author.bot) return;
-  let xpchannel = message.guild.channels.find(c => c.name === "staff_bot_commands");
+  let xpchannel = message.guild.channels.find(c => c.name === "leveling");
   if(!xpchannel) return message.channel.send("Couldn't find XP channel.");
   xpchannel.send(`${message.author} just advanced to level ${curlvl + 1}!`);
 };
