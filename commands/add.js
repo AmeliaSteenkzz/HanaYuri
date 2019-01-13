@@ -702,13 +702,12 @@ if(args[0] === 'event') {
   if(memberRoleAdd.roles.has(roleEvent.id)) return message.channel.send(alreadyEmbed);
   message.channel.send(addEmbed);
   memberRoleAdd.addRole(roleEvent).catch(console.error);
-}}
+}
 if(args[0] === 'Event') {
   if(memberRoleAdd.roles.has(roleEvent.id)) return message.channel.send(alreadyEmbed);
   message.channel.send(addEmbed);
   memberRoleAdd.addRole(roleEvent).catch(console.error);
-}}
-
+}
 }
 
 module.exports.help = {
