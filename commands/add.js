@@ -67,7 +67,7 @@ let roleFurry = message.guild.roles.find(r => r.name === "Furry");
 let roleYuri = message.guild.roles.find(r => r.name === "Yuri");
 let roleYaoi = message.guild.roles.find(r => r.name === "Yaoi");
 let roleLevelBlock = message.guild.roles.find(r => r.name === "Level Block");
-let roleEvent = message.guild.roles.find(r => r.name === "Event Attendee"
+let roleEvent = message.guild.roles.find(r => r.name === "Event Attendee");
 let memberRoleAdd = message.member;
 
 if(args[0] === 'cyancolor') {
