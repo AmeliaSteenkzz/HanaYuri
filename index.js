@@ -330,7 +330,7 @@ bot.on("message", async message => {
 
 if(!cooldown.has(message.author.id)){
 
-let xpAdd = Math.floor(Math.random() * 30) + 20;
+let xpAdd = Math.floor(Math.random() * 15) + 10;
 console.log(`${xpAdd} XP added`)
 
 if(!xp[message.author.id]){
