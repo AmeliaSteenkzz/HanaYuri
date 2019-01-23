@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
   .setColor("#af0e97")
   .setThumbnail(message.guild.iconURL)
   .addField("Owner", `<@246693689731186688>`)
-  .addField("Admin", `<@377284513723842561>`)
+  .addField("Admin", `None`)
   .addField("Mods", `<@253227808208191488> <@302469215779160065> <@203471080742977538>`);
 
   message.channel.send(staffembed);
