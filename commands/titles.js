@@ -47,13 +47,13 @@ module.exports.run = async (bot, message, args) => {
   if(args[0] === 'ultimate') {
     message.channel.send(infoembed);
   }
-  if(args[0] === 'Epic') {
+  if(args[0] === 'epic') {
     message.channel.send(funembed);
   }
-  if(args[0] === 'Uncommon') {
+  if(args[0] === 'uncommon') {
     message.channel.send(othersembed);
   }
-  if(args[0] === 'Event') {
+  if(args[0] === 'event') {
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(nopermembed);
     return message.channel.send(staffhelpembed);
   }
