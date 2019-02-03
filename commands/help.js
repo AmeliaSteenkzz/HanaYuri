@@ -28,6 +28,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("h!vips", "shows all VIP packs for donators")
   .addField("h!halloffame", "shows everyone in the Hall Of Fame")
   .addField("h!staff", "shows all current staff members")
+  .addField("h!titles", "show a list of all titles")
   .addField("h!colors", "shows a list of all available colors that you can add")
   .addField("h!roles", "shows a list of all available extra roles that you can add")
   .addField("h!level", "check your current level and EXP")
