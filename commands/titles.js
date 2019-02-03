@@ -17,33 +17,28 @@ module.exports.run = async (bot, message, args) => {
   let infoembed = new Discord.RichEmbed()
   .setDescription("Ultimate Titles")
   .setColor("#af0e97")
-  .setThumbnail("https://cdn.discordapp.com/attachments/486583639253975042/531130449649467393/2000px-Icon-notepad.svg.png")
-  .addField("<@&497410652772761601>", "test")
+  .addField("Ultimate Gift Giver💐", "Donate $50+ to the server")
 
   let funembed = new Discord.RichEmbed()
-  .setDescription("Fun Command List")
+  .setDescription("Epic Titles")
   .setColor("#af0e97")
-  .setThumbnail("https://cdn.discordapp.com/attachments/486583639253975042/531132326638387201/b8316909587b624d18cd4c52b27c653e.png")
-  .addField("h!8ball", "ask Hanayuri a question")
-  .addField("h!cat", "shows a random cat picture")
-  .addField("dogembed", "shows a random doggo picture");
+  .addField("King Of Ranks👑", "Be on the LeaderBoard, aka. be in the top 10 of level members.")
+  .addField("Vip Supporter✨", "For members who've donated $5+ to the server.")
+  .addField("Server Savior💎", "For all the members who helped us re-build the Hentai World when the server wipe occurred.");
 
   let othersembed = new Discord.RichEmbed()
-  .setDescription("Others Command List")
+  .setDescription("Uncommon Titles")
   .setColor("#af0e97")
-  .setThumbnail("https://cdn.discordapp.com/attachments/486583639253975042/531133221992398868/854145.png")
-  .addField("h!report", "report someone in the server");
+  .addField("Invite Warrior📜", "Invite 10+ people to this server.")
+  .addField("Reddit Master🤖", "Be active in the Hentai World reddit.");
 
   let staffhelpembed = new Discord.RichEmbed()
-  .setDescription("Staff Command List")
+  .setDescription("Event Titles")
   .setColor("#af0e97")
-  .setThumbnail("https://cdn.discordapp.com/attachments/486583639253975042/531134577675337748/wrench-512.png")
-  .addField("h!say", "let Hanayuri say something")
-  .addField("h!clear", "delete an ammount of messages in the chat")
-  .addField("h!addrole", "give someone a role")
-  .addField("h!removerole", "remove a role from someone")
-  .addField("h!warn", "warns someone. The more warnings, the bigger the punishment")
-  .addField("h!tempmute", "mute a person from the chat for a set ammount of time");
+  .addField("Valentine Lover💗", "Obtainable in the Valentine Event")
+  .addField("3K Event Pimp⭐", "Obtainable in the 3K Members Event.")
+  .addField("Ice Cold Snowman⛄", "Obtainable in the Halloween Event.")
+  .addField("Spooky Pumpkin🎃", "Obtainable in the Christmas Event.")
 
   let nopermembed = new Discord.RichEmbed()
   .setTitle("You have no business here, peasant!")
@@ -52,13 +47,13 @@ module.exports.run = async (bot, message, args) => {
   if(args[0] === 'ultimate') {
     message.channel.send(infoembed);
   }
-  if(args[0] === 'fun') {
+  if(args[0] === 'Epic') {
     message.channel.send(funembed);
   }
-  if(args[0] === 'others') {
+  if(args[0] === 'Uncommon') {
     message.channel.send(othersembed);
   }
-  if(args[0] === 'staff') {
+  if(args[0] === 'Event') {
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(nopermembed);
     return message.channel.send(staffhelpembed);
   }
