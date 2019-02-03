@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Uncommon", "Quickly or easily obtainable", true)
   .setFooter("Usage: h!titles {title type}");
 
-  if(!args[0]) return message.reply(helpCembed);
+  if(!args[0]) return message.channel.send(helpCembed);
   let question = args.slice(1).join(" ");
 
   let infoembed = new Discord.RichEmbed()
@@ -49,7 +49,7 @@ module.exports.run = async (bot, message, args) => {
   .setTitle("You have no business here, peasant!")
   .setColor("#af0e97");
 
-  if(args[0] === 'info') {
+  if(args[0] === 'ultimate') {
     message.channel.send(infoembed);
   }
   if(args[0] === 'fun') {
