@@ -563,6 +563,6 @@ bot.on("message", async message => {
 //   cooldown.delete(message.author.id);
 // }, 60000);
 // }
-);
+//);
 
 bot.login(botconfig.token);
