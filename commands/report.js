@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
       .setTitle("Your report has been recieved!")
       .setColor("#af0e97");
 
-      let reportschannel = message.guild.channels.find(c => c.name === "other_logs");
+      let reportschannel = message.guild.channels.find(c => c.name === "staff_lounge");
       if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
       message.delete().catch(O_o=>{});
       reportschannel.send(reportEmbed).then(msg => message.channel.send(reporterEmbed));
