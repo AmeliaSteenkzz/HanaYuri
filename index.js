@@ -429,7 +429,7 @@ bot.on("message", async message => {
 //     sql = `UPDATE xp SET xp = ${xp + generateXP()} WHERE id = '${message.guild.id}'`;
 //   }
 //   con.query(sql, console.log);
-})
+//})
 //let xpAdd = Math.floor(Math.random() * 15) + 10;
 //console.log(`${xpAdd} XP added`)
 
