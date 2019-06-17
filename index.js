@@ -567,4 +567,4 @@ bot.on("message", async message => {
 // }
 //);
 
-bot.login(botconfig.token);
+client.login(token).catch(err => console.log(err));
