@@ -1,7 +1,6 @@
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const fs = require("fs");
-const mysql = require("mysql");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 let coins = require("./coins.json");
@@ -25,16 +24,6 @@ fs.readdir("./commands/", (err, files) => {
   });
 
 });
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "***",
-  database: "sadb"
-});
-con.connect(err => {
-  if(err) throw err;
-  console.log("Connected to database!");
-})
 
 function generateXP() {
   let min = 10;
