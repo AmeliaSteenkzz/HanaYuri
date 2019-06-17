@@ -3,8 +3,6 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
-let coins = require("./coins.json");
-let xp = require("./xp.json");
 let cooldown = new Set();
 
 fs.readdir("./commands/", (err, files) => {
@@ -24,14 +22,6 @@ fs.readdir("./commands/", (err, files) => {
   });
 
 });
-
-function generateXP() {
-  let min = 10;
-  let max = 30;
-
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 
@@ -397,48 +387,48 @@ bot.on("message", async message => {
 
   });
 
-bot.on("message", async message => {
+// bot.on("message", async message => {
 
-  if(!coins[message.author.id]){
-    coins[message.author.id] = {
-      coins: 0
-}};
+//   if(!coins[message.author.id]){
+//     coins[message.author.id] = {
+//       coins: 0
+// }};
 
-let coinAmt = Math.floor(Math.random() * 1) + 1;
-let baseAmt = Math.floor(Math.random() * 1) + 1;
+// let coinAmt = Math.floor(Math.random() * 1) + 1;
+// let baseAmt = Math.floor(Math.random() * 1) + 1;
 
-if(coinAmt === baseAmt){
-  coins[message.author.id] = {
-    coins: coins[message.author.id].coins + coinAmt
-  };
-fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
-  if (err) console.log(err)
-});
-let coinEmbed = new Discord.RichEmbed()
-.setAuthor(message.author.username)
-.setColor("#af0e97")
-.addField("➕", `${coinAmt} coins added!💰`)
+// if(coinAmt === baseAmt){
+//   coins[message.author.id] = {
+//     coins: coins[message.author.id].coins + coinAmt
+//   };
+// fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
+//   if (err) console.log(err)
+// });
+// let coinEmbed = new Discord.RichEmbed()
+// .setAuthor(message.author.username)
+// .setColor("#af0e97")
+// .addField("➕", `${coinAmt} coins added!💰`)
 
-if(message.author.bot) return;
-let coinschannel = message.guild.channels.find(c => c.name === "coins");
-if(!coinschannel) return message.channel.send("Couldn't find coins channel.");
-coinschannel.send(coinEmbed);
+// if(message.author.bot) return;
+// let coinschannel = message.guild.channels.find(c => c.name === "coins");
+// if(!coinschannel) return message.channel.send("Couldn't find coins channel.");
+// coinschannel.send(coinEmbed);
 
-}
-//if(!cooldown.has(message.author.id)){
+// }
+// //if(!cooldown.has(message.author.id)){
 
-con.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
-  if(err) throw err;
+// con.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
+//   if(err) throw err;
 
-  let sql;
+//   let sql;
 
-  if(rows.length < 1) {
-    sql = `INSTERT INTO xp (id, xp) VALUES ('${message.author.id}', ${generateXP()})`
-  } else {
-    let xp = rows[0].xp;
-    sql = `UPDATE xp SET xp = ${xp + generateXP()} WHERE id = '${message.guild.id}'`;
-  }
-  con.query(sql, console.log);
+//   if(rows.length < 1) {
+//     sql = `INSTERT INTO xp (id, xp) VALUES ('${message.author.id}', ${generateXP()})`
+//   } else {
+//     let xp = rows[0].xp;
+//     sql = `UPDATE xp SET xp = ${xp + generateXP()} WHERE id = '${message.guild.id}'`;
+//   }
+//   con.query(sql, console.log);
 })
 //let xpAdd = Math.floor(Math.random() * 15) + 10;
 //console.log(`${xpAdd} XP added`)
@@ -559,7 +549,7 @@ con.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
 
 //};
 //if(!message.member.hasPermission("ADMINISTRATOR")){
-  cooldown.add(message.author.id);
+//   cooldown.add(message.author.id);
 //}
 
 //let messageArray = message.content.split(" ");
@@ -569,10 +559,10 @@ con.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
 //let commandfile = bot.commands.get(cmd.slice(prefix.length));
 //if(commandfile) commandfile.run(bot,message,args);
 
-setTimeout(() => {
-  cooldown.delete(message.author.id);
-}, 60000);
-}
+// setTimeout(() => {
+//   cooldown.delete(message.author.id);
+// }, 60000);
+// }
 );
 
 bot.login(botconfig.token);
