@@ -28,7 +28,7 @@ fs.readdir("./commands/", (err, files) => {
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "njitram7",
+  password: "***",
   database: "sadb"
 });
 con.connect(err => {
@@ -48,7 +48,7 @@ bot.on("ready", async () => {
 
   bot.user.setActivity("Anime World", {type: "WATCHING"});
 
-  //bot.user.setGame("HW Original Bot");
+  //bot.user.setGame("AW Original Bot");
 });
 
 bot.on("guildMemberAdd", function(member)
