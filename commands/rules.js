@@ -5,12 +5,12 @@ module.exports.run = async (bot, message, args) => {
     let sicon = message.guild.iconURL;
     let rulesembed = new Discord.RichEmbed()
     .setDescription("Please choose a category")
-    .setColor("#af0e97")
+    .setColor("#ff70ff")
     .setThumbnail(sicon)
-    .addField("1", "Rules about fights and drama", true)
-    .addField("2", "Rules about behavior", true)
-    .addField("3", "Rules about using channels", true)
-    .addField("4", "Rules about nsfw", true)
+    .addField("1", "Rules about fights and drama")
+    .addField("2", "Rules about behavior")
+    .addField("3", "Rules about using channels")
+    .addField("4", "Rules about nsfw")
     .setFooter("Usage: h!rules {category number}");
 
     if(!args[0]) return message.channel.send(rulesembed);
@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
 
     let rules1embed = new Discord.RichEmbed()
     .setDescription("Do not keep all drama and fights in the server.")
-    .setColor("#af0e97")
+    .setColor("#ff70ff")
     .setThumbnail(sicon)
     .addField("1.A", "Do that in Private Messages. if you continue with the drama or the fight, then you'll be muted.")
     .addField("1.B", "Likewise, don't bring needless personal- or DM drama into the server.")
@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
 
     let rules2embed = new Discord.RichEmbed()
     .setDescription("Have respect and be nice to everyone")
-    .setColor("#af0e97")
+    .setColor("#ff70ff")
     .setThumbnail(sicon)
     .addField("2.A", "Cursing is allowed, but bullying, threatening, stalking, or using someone for your own needs isnt. Basically don't be a dick.")
     .addField("2.B", "Using racist words is allowed. Can't believe I have to put this in here. It's the internet, what do you expect.")
@@ -35,12 +35,12 @@ module.exports.run = async (bot, message, args) => {
     .addField("2.D", "Do not send unwanted nudes in DMs to people. If you do send unwanted nudes, then we're forced to remove you from the server.")
     .addField("2.E", "Continuation of intended spam or being annoying leads to a mute or more if continued.")
     .addField("2.F", "If we find out you take part in Pedophilia like actions in real life, we are forced to remove you from the server.")
-    .addField("2.G", "Do not use double accounts to pretend like someone else, boost your ego, or pretend you're the opposite gender.")
+    .addField("2.G", "Do not pretend to be someone else. Aka identity theft or catfishing. This could lead to a ban.")
     .setFooter(`requested by ${message.author.tag}`, message.author.displayAvatarURL);
 
     let rules3embed = new Discord.RichEmbed()
     .setDescription("Keep the content in the right channels.")
-    .setColor("#af0e97")
+    .setColor("#ff70ff")
     .setThumbnail(sicon)
     .addField("3.A", "No spamming, trolling, bullshitting or trash talking.")
     .addField("3.B", "It's not allowed to use bot commands in normal chats.")
@@ -49,7 +49,7 @@ module.exports.run = async (bot, message, args) => {
 
     let rules4embed = new Discord.RichEmbed()
     .setDescription("All kinds of hentai will be posted in the nsfw channels")
-    .setColor("#af0e97")
+    .setColor("#ff70ff")
     .setThumbnail(sicon)
     .addField("4.A", "Keep the NSFW content in the NSFW marked channels.")
     .addField("4.B", "No Gore, Guro, Vore, Pedophilia, Necrophiliac or other weird disgusting shit.")

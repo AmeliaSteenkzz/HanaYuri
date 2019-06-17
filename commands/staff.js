@@ -6,9 +6,9 @@ module.exports.run = async (bot, message, args) => {
   .setDescription("All Current Staff Members")
   .setColor("#af0e97")
   .setThumbnail(message.guild.iconURL)
-  .addField("Owner", `<@246693689731186688>`)
-  .addField("Admin", `None`)
-  .addField("Mods", `<@253227808208191488> <@302469215779160065> <@203471080742977538>`);
+  .addField("Owner", `:${message.guild.roles.get('588438904668160010').members.map(m=>m.user).join('\n')}`)
+  .addField("Admin", `:${message.guild.roles.get('588438924679184385').members.map(m=>m.user).join('\n')}`)
+  .addField("Moderator", `:${message.guild.roles.get('588438942819287123').members.map(m=>m.user).join('\n')}`);
 
   message.channel.send(staffembed);
 

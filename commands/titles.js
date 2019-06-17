@@ -2,60 +2,49 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-  let helpCembed = new Discord.RichEmbed()
+  let titleembed = new Discord.RichEmbed()
   .setTitle("Please choose a type of title")
   .setColor("#af0e97")
-  .addField("Ultimate", "The rarest type of titles ever", true)
-  .addField("Epic", "Gained by doing something incredible", true)
-  .addField("Event", "Gained through a specific event", true)
-  .addField("Uncommon", "Quickly or easily obtainable", true)
+  .addField("Legendary", "Ultra rare ones that very few people have. Typically the hardest of the hardest tasks.", true)
+  .addField("Epic", "A lot less common as Rare titles. Typically harder to get as well.", true)
+  .addField("Rare", "Easiest types of titles to get.", true)
+  .addField("Limited", "Will go away after a certain time and will never be available again. Mostly not hard to get.")
   .setFooter("Usage: h!titles {title type}");
 
-  if(!args[0]) return message.channel.send(helpCembed);
+  if(!args[0]) return message.channel.send(titleembed);
   let question = args.slice(1).join(" ");
 
-  let infoembed = new Discord.RichEmbed()
-  .setDescription("Ultimate Titles")
+  let legendaryembed = new Discord.RichEmbed()
+  .setDescription("Legendary Titles")
   .setColor("#af0e97")
-  .addField("Ultimate Gift Giver💐", "Donate $50+ to the server")
+  .addField("Names and how to obtain", "<@&588676209035051041> Donate to the Anime World server.\n<@&588676211983777792> Be in the top 3 highest member levels. To see the top 10 go to #leaderboard.")
 
-  let funembed = new Discord.RichEmbed()
+  let epicembed = new Discord.RichEmbed()
   .setDescription("Epic Titles")
   .setColor("#af0e97")
-  .addField("King Of Ranks👑", "Be on the LeaderBoard, aka. be in the top 10 of level members.")
-  .addField("Vip Supporter✨", "For members who've donated $5+ to the server.")
-  .addField("Server Savior💎", "For all the members who helped us re-build the Hentai World when the server wipe occurred.");
+  .addField("Names and how to obtain", "<@&588664739362504715> Boost the server with Nitro Server Boost.\n<@&588676209357881364> Be in the top 10 highest member levels. To see the top 10 go to #leaderboard.\n<@&588709100737789952> Reach level 50 in ranks.")
 
-  let othersembed = new Discord.RichEmbed()
-  .setDescription("Uncommon Titles")
+  let rareembed = new Discord.RichEmbed()
+  .setDescription("Rare Titles")
   .setColor("#af0e97")
-  .addField("Invite Warrior📜", "Invite 10+ people to this server.")
-  .addField("Reddit Master🤖", "Be active in the Hentai World reddit.");
+  .addField("Names and how to obtain", "<@&588676207202140162> Invite 10 or more people to the server. Duplicate accounts do not count as an invite.\n<@&588676208099590144> Bump the server frequently in the #bump_island channel.\n<@&588740057855295488> Win the weekly EXP event by gathering the most EXP out of anyone in a week.")
 
-  let staffhelpembed = new Discord.RichEmbed()
-  .setDescription("Event Titles")
+  let limitedembed = new Discord.RichEmbed()
+  .setDescription("Limited Titles")
   .setColor("#af0e97")
-  .addField("Valentine Lover💗", "Obtainable in the Valentine Event")
-  .addField("3K Event Pimp⭐", "Obtainable in the 3K Members Event.")
-  .addField("Ice Cold Snowman⛄", "Obtainable in the Halloween Event.")
-  .addField("Spooky Pumpkin🎃", "Obtainable in the Christmas Event.")
+  .addField("Names and how to obtain", "<@&588676208737255435> Be part of the first 100 users to join the community.")
 
-  let nopermembed = new Discord.RichEmbed()
-  .setTitle("You have no business here, peasant!")
-  .setColor("#af0e97");
-
-  if(args[0] === 'ultimate') {
-    message.channel.send(infoembed);
+  if(args[0] === 'legendary') {
+    message.channel.send(legendaryembed);
   }
   if(args[0] === 'epic') {
-    message.channel.send(funembed);
+    message.channel.send(epicembed);
   }
-  if(args[0] === 'uncommon') {
-    message.channel.send(othersembed);
+  if(args[0] === 'rare') {
+    message.channel.send(rareembed);
   }
-  if(args[0] === 'event') {
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(nopermembed);
-    return message.channel.send(staffhelpembed);
+  if(args[0] === 'limited') {
+    message.channel.send(limitedembed);
   }
 }
 

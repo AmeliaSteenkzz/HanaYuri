@@ -2,6 +2,8 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
+let roleName = `${args[0]}`
+
 let noRoleEmbed = new Discord.RichEmbed()
 .setTitle("❌ You didn't specify a role")
 .setColor("#af0e97")
@@ -23,693 +25,5571 @@ let wrongRoleEmbed = new Discord.RichEmbed()
 .setColor("#af0e97")
 .setFooter("Use h!roles to see all available roles");
 
-let roleCyanColor = message.guild.roles.find(r => r.name === "CyanColor");
-let roleDarkGreenColor = message.guild.roles.find(r => r.name === "DarkGreenColor");
-let roleGreenColor = message.guild.roles.find(r => r.name === "GreenColor");
-let roleLightGreenColor = message.guild.roles.find(r => r.name === "LightGreenColor");
-let roleDarkBlueColor = message.guild.roles.find(r => r.name === "DarkBlueColor");
-let roleBlueColor = message.guild.roles.find(r => r.name === "BlueColor");
-let roleLightBlueColor = message.guild.roles.find(r => r.name === "LightBlueColor");
-let roleBloodRedColor = message.guild.roles.find(r => r.name === "BloodRedColor");
-let rolePinkColor = message.guild.roles.find(r => r.name === "PinkColor");
-let rolePurpleColor = message.guild.roles.find(r => r.name === "PurpleColor");
-let roleSweetPurpleColor = message.guild.roles.find(r => r.name === "SweetPurpleColor");
-let roleDarkRedColor = message.guild.roles.find(r => r.name === "DarkRedColor");
+let roleBasicColor = message.guild.roles.find(r => r.name === "BasicColor");
+let roleIndianRedColor = message.guild.roles.find(r => r.name === "IndianRedColor");
+let roleCrimsonColor = message.guild.roles.find(r => r.name === "CrimsonColor");
 let roleRedColor = message.guild.roles.find(r => r.name === "RedColor");
-let roleBurntOrangeColor = message.guild.roles.find(r => r.name === "BurntOrangeColor");
-let roleOrangeColor = message.guild.roles.find(r => r.name === "OrangeColor");
+let roleDarkRedColor = message.guild.roles.find(r => r.name === "DarkRedColor");
+let rolePinkColor = message.guild.roles.find(r => r.name === "PinkColor");
+let roleHotPinkColor = message.guild.roles.find(r => r.name === "HotPinkColor");
+let roleVioletRedColor = message.guild.roles.find(r => r.name === "VioletRedColor");
+let roleLightSalmonColor = message.guild.roles.find(r => r.name === "LightSalmonColor");
+let roleOrangeRedColor = message.guild.roles.find(r => r.name === "OrangeRedColor");
+let roleDarkOrangeColor = message.guild.roles.find(r => r.name === "DarkOrangeColor");
+let roleGoldColor = message.guild.roles.find(r => r.name === "GoldColor");
 let roleYellowColor = message.guild.roles.find(r => r.name === "YellowColor");
+let roleMoccasinColor = message.guild.roles.find(r => r.name === "MoccasinColor");
+let roleKhakiColor = message.guild.roles.find(r => r.name === "KhakiColor");
+let roleDarkKhakiColor = message.guild.roles.find(r => r.name === "DarkKhakiColor");
+let roleVioletColor = message.guild.roles.find(r => r.name === "VioletColor");
+let roleMagentaColor = message.guild.roles.find(r => r.name === "MagentaColor");
+let roleMediumOrchidColor = message.guild.roles.find(r => r.name === "MediumOrchidColor");
+let roleBlueVioletColor = message.guild.roles.find(r => r.name === "BlueVioletColor");
+let roleDarkMagentaColor = message.guild.roles.find(r => r.name === "DarkMagentaColor");
+let roleIndigoColor = message.guild.roles.find(r => r.name === "IndigoColor");
+let roleDarkSlateBlueColor = message.guild.roles.find(r => r.name === "DarkSlateBlueColor");
+let roleMediumSlateBlueColor = message.guild.roles.find(r => r.name === "MediumSlateBlueColor");
+let roleGreenYellowColor = message.guild.roles.find(r => r.name === "GreenYellowColor");
+let roleLimeColor = message.guild.roles.find(r => r.name === "LimeColor");
+let roleLimeGreenColor = message.guild.roles.find(r => r.name === "LimeGreenColor");
+let rolePaleGreenColor = message.guild.roles.find(r => r.name === "PaleGreenColor");
+let roleSpringGreenColor = message.guild.roles.find(r => r.name === "SpringGreenColor");
+let roleSeaGreenColor = message.guild.roles.find(r => r.name === "SeaGreenColor");
+let roleGreenColor = message.guild.roles.find(r => r.name === "GreenColor");
+let roleDarkGreenColor = message.guild.roles.find(r => r.name === "DarkGreenColor");
+let roleOliveColor = message.guild.roles.find(r => r.name === "OliveColor");
+let roleAquamarineColor = message.guild.roles.find(r => r.name === "AquamarineColor");
+let roleDarkCyanColor = message.guild.roles.find(r => r.name === "DarkCyanColor");
+let roleCyanColor = message.guild.roles.find(r => r.name === "CyanColor");
+let roleTurquoiseColor = message.guild.roles.find(r => r.name === "TurquoiseColor");
+let roleLightCyanColor = message.guild.roles.find(r => r.name === "LightCyanColor");
+let roleCadetBlueColor = message.guild.roles.find(r => r.name === "CadetBlueColor");
+let roleSteelBlueColor = message.guild.roles.find(r => r.name === "SteelBlueColor");
+let rolePowderBlueColor = message.guild.roles.find(r => r.name === "PowderBlueColor");
+let roleSkyBlueColor = message.guild.roles.find(r => r.name === "SkyBlueColor");
+let roleDeepSkyBlueColor = message.guild.roles.find(r => r.name === "DeepSkyBlueColor");
+let roleDodgerBlueColor = message.guild.roles.find(r => r.name === "DodgerBlueColor");
+let roleSlateBlueColor = message.guild.roles.find(r => r.name === "SlateBlueColor");
+let roleBlueColor = message.guild.roles.find(r => r.name === "BlueColor");
+let roleDarkBlueColor = message.guild.roles.find(r => r.name === "DarkBlueColor");
+let roleWheatColor = message.guild.roles.find(r => r.name === "WheatColor");
+let roleBurlyWoodColor = message.guild.roles.find(r => r.name === "BurlyWoodColor");
+let roleRosyBrownColor = message.guild.roles.find(r => r.name === "RosyBrownColor");
+let roleSandyBrownColor = message.guild.roles.find(r => r.name === "SandyBrownColor");
+let roleGoldenRodColor = message.guild.roles.find(r => r.name === "GoldenRodColor");
+let roleDarkGoldenRodColor = message.guild.roles.find(r => r.name === "DarkGoldenRodColor");
+let roleChocolateColor = message.guild.roles.find(r => r.name === "ChocolateColor");
+let roleSaddleBrownColor = message.guild.roles.find(r => r.name === "SaddleBrownColor");
+let roleBrownColor = message.guild.roles.find(r => r.name === "BrownColor");
+let roleMaroonColor = message.guild.roles.find(r => r.name === "MaroonColor");
+let roleWhiteColor = message.guild.roles.find(r => r.name === "WhiteColor");
+let roleBeigeColor = message.guild.roles.find(r => r.name === "BeigeColor");
+let roleLavenderBlushColor = message.guild.roles.find(r => r.name === "LavenderBlushColor");
+let roleMistyRoseColor = message.guild.roles.find(r => r.name === "MistyRoseColor");
+let roleSilverColor = message.guild.roles.find(r => r.name === "SilverColor");
+let roleGrayColor = message.guild.roles.find(r => r.name === "GrayColor");
+let roleSlateGrayColor = message.guild.roles.find(r => r.name === "SlateGrayColor");
+let roleDarkSlateGrayColor = message.guild.roles.find(r => r.name === "DarkSlateGrayColor");
 let roleBlackColor = message.guild.roles.find(r => r.name === "BlackColor");
-let roleGreyColor = message.guild.roles.find(r => r.name === "GreyColor");
-let roleMale = message.guild.roles.find(r => r.name === "Male");
-let roleFemale = message.guild.roles.find(r => r.name === "Female");
-let roleStraight = message.guild.roles.find(r => r.name === "Straight");
-let roleHomosexual = message.guild.roles.find(r => r.name === "Homosexual");
-let roleBisexual = message.guild.roles.find(r => r.name === "Bisexual");
-let roleAsexual = message.guild.roles.find(r => r.name === "Asexual");
-let roleSingle = message.guild.roles.find(r => r.name === "Single");
-let roleTaken = message.guild.roles.find(r => r.name === "Taken");
-let roleDom = message.guild.roles.find(r => r.name === "Dom");
-let roleSub = message.guild.roles.find(r => r.name === "Sub");
-let roleSwitch = message.guild.roles.find(r => r.name === "Switch");
-let roleTransgender = message.guild.roles.find(r => r.name === "Transgender");
-let roleApacheHelicopter = message.guild.roles.find(r => r.name === "Apache Helicopter");
-let roleVanilla = message.guild.roles.find(r => r.name === "Vanilla");
-let roleFetish = message.guild.roles.find(r => r.name === "Fetish");
-let roleAhegao = message.guild.roles.find(r => r.name === "Ahegao");
-let roleFuta = message.guild.roles.find(r => r.name === "Futa");
-let roleTentacles = message.guild.roles.find(r => r.name === "Tentacles");
-let roleNeko = message.guild.roles.find(r => r.name === "Neko");
-let roleLoli = message.guild.roles.find(r => r.name === "Loli");
-let roleThicc = message.guild.roles.find(r => r.name === "Thicc");
-let roleBDSM = message.guild.roles.find(r => r.name === "BDSM");
-let roleFurry = message.guild.roles.find(r => r.name === "Furry");
-let roleYuri = message.guild.roles.find(r => r.name === "Yuri");
-let roleYaoi = message.guild.roles.find(r => r.name === "Yaoi");
-let roleLevelBlock = message.guild.roles.find(r => r.name === "Level Block");
-let roleEvent = message.guild.roles.find(r => r.name === "Event Attendee");
+
+let roleYakusokunoNeverland = message.guild.roles.find(r => r.name === "Yakusoku no Neverland");
+let roleBlackClover = message.guild.roles.find(r => r.name === "Black Clover");
+let roleNanatsuNoTaizai = message.guild.roles.find(r => r.name === "Nanatsu No Taizai");
+let roleReZero = message.guild.roles.find(r => r.name === "Re:Zero");
+let roleFairyTail = message.guild.roles.find(r => r.name === "Fairy Tail");
+let roleBokuNoHeroAcademia = message.guild.roles.find(r => r.name === "Boku No Hero Academia");
+let roleGintama = message.guild.roles.find(r => r.name === "Gintama");
+let roleJoJosBizarreAdventure = message.guild.roles.find(r => r.name === "JoJo's Bizarre Adventure");
+let rolePokémon = message.guild.roles.find(r => r.name === "Pokémon");
+let roleKobayashisanChinoMaidDragon = message.guild.roles.find(r => r.name === "Kobayashi-san Chi no Maid Dragon");
+let roleOnePiece = message.guild.roles.find(r => r.name === "One Piece");
+let roleTheRisingoftheShieldHero = message.guild.roles.find(r => r.name === "The Rising of the Shield Hero");
+let roleNaruto = message.guild.roles.find(r => r.name === "Naruto");
+let roleDarlingintheFranXX = message.guild.roles.find(r => r.name === "Darling in the FranXX");
+let roleInuyasha = message.guild.roles.find(r => r.name === "Inuyasha");
+let roleShingekinoKyojin = message.guild.roles.find(r => r.name === "Shingeki no Kyojin");
+let roleLuckyStar = message.guild.roles.find(r => r.name === "Lucky Star");
+let roleFullMetalAlchemist = message.guild.roles.find(r => r.name === "Full Metal Alchemist");
+let roleOverlord = message.guild.roles.find(r => r.name === "Overlord");
+let roleMadeInAbyss = message.guild.roles.find(r => r.name === "Made In Abyss");
+let roleDragonBallZ = message.guild.roles.find(r => r.name === "Dragon Ball Z");
+let roleMobPsycho100 = message.guild.roles.find(r => r.name === "Mob Psycho 100");
+let roleOnePunchMan = message.guild.roles.find(r => r.name === "One Punch Man");
+let roleAzumangaDaioh = message.guild.roles.find(r => r.name === "Azumanga Daioh");
+let roleNoragami = message.guild.roles.find(r => r.name === "Noragami");
+let roleTokyoGhoul = message.guild.roles.find(r => r.name === "Tokyo Ghoul");
+let roleYoujoSenki = message.guild.roles.find(r => r.name === "Youjo Senki");
+let roleHighSchoolDxD = message.guild.roles.find(r => r.name === "High School DxD");
+let roleYurionIce = message.guild.roles.find(r => r.name === "Yuri!!! on Ice");
+let roleHaikyuu = message.guild.roles.find(r => r.name === "Haikyuu!!");
+let roleKurokonoBasket = message.guild.roles.find(r => r.name === "Kuroko no Basket");
+let roleKeijo = message.guild.roles.find(r => r.name === "Keijo!!!!!!!!");
+let roleInitialD = message.guild.roles.find(r => r.name === "Initial D");
+let roleOokamitoKoushinryou = message.guild.roles.find(r => r.name === "Ookami to Koushinryou");
+let roleDrifters = message.guild.roles.find(r => r.name === "Drifters");
+let roleKOn = message.guild.roles.find(r => r.name === "K-On!!");
+let roleMiraiNikki = message.guild.roles.find(r => r.name === "Mirai Nikki");
+let roleHunterxHunter = message.guild.roles.find(r => r.name === "Hunter x Hunter");
+let roleFoodWars = message.guild.roles.find(r => r.name === "Food Wars");
+let roleYuGiOh = message.guild.roles.find(r => r.name === "Yu-Gi-Oh");
+let roleIdolmaster = message.guild.roles.find(r => r.name === "Idolm@ster");
+let roleKantaiCollection = message.guild.roles.find(r => r.name === "Kantai Collection");
+let roleNeptunia = message.guild.roles.find(r => r.name === "Neptunia");
+let roleBanGDream = message.guild.roles.find(r => r.name === "BanG Dream");
+let roleSteinsGate = message.guild.roles.find(r => r.name === "Steins;Gate");
+let roleCodeGeass = message.guild.roles.find(r => r.name === "Code Geass");
+let roleTengenToppaGurrenLagann = message.guild.roles.find(r => r.name === "Tengen Toppa Gurren Lagann");
+let roleCowboyBebop = message.guild.roles.find(r => r.name === "Cowboy Bebop");
+let roleNeonGenesisEvangelion = message.guild.roles.find(r => r.name === "Neon Genesis Evangelion");
+let roleGuiltyCrown = message.guild.roles.find(r => r.name === "Guilty Crown");
+let roleSuzumiyaHaruhinoYuuutsu = message.guild.roles.find(r => r.name === "Suzumiya Haruhi no Yuuutsu");
+let roleToradora = message.guild.roles.find(r => r.name === "Toradora!");
+let roleKiminoNawa = message.guild.roles.find(r => r.name === "Kimi no Na wa.");
+let roleSwordArtOnline = message.guild.roles.find(r => r.name === "Sword Art Online");
+let roleYourLieinApril = message.guild.roles.find(r => r.name === "Your Lie in April");
+let roleBakemonogatari = message.guild.roles.find(r => r.name === "Bakemonogatari");
+let roleTheDevilisaPartTimer = message.guild.roles.find(r => r.name === "The Devil is a Part-Timer!");
+let roleChuunibyoudemoKoigaShitai = message.guild.roles.find(r => r.name === "Chuunibyou demo Koi ga Shitai!");
+let roleBoboboboBobobo = message.guild.roles.find(r => r.name === "Bobobo-bo Bo-bobo");
+let roleNichijou = message.guild.roles.find(r => r.name === "Nichijou");
 let memberRoleAdd = message.member;
 
-if(args[0] === 'cyancolor') {
-  if(memberRoleAdd.roles.has(roleCyanColor.id)) return message.channel.send(alreadyEmbed);
+if(args[0].toLowerCase() === 'indianredcolor') {
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) return message.channel.send(alreadyEmbed);
+    if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+    if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+    if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+    if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+    if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+    if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+    if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+    if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+    if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+    if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+    if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+    if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+    if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+    if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+    if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+    if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+    if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+    if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+    if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+    if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+    if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+    if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+    if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+    if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+    if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+    if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+    if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+    if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+    if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+    if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+    if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+    if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+    if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+    if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+    if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+    if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+    if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+    if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+    if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+    if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+    if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+    if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+    if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+    if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+    if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+    if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+    if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+    if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+    if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+    if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+    if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+    if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+    if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+    if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+    if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+    if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+    if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+    if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+    if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+    if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+    if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+    if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+    if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+    if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+    if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+    if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleCyanColor).catch(console.error);
+  memberRoleAdd.addRole(roleIndianRedColor).catch(console.error);
 }
-if(args[0] === 'cyan') {
-  if(memberRoleAdd.roles.has(roleCyanColor.id)) return message.channel.send(alreadyEmbed);
+if(args[0].toLowerCase() === 'crimsoncolor') {
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleCyanColor).catch(console.error);
+  memberRoleAdd.addRole(roleCrimsonColor).catch(console.error);
 }
-if(args[0] === 'CyanColor') {
-  if(memberRoleAdd.roles.has(roleCyanColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleCyanColor).catch(console.error);
-}
-if(args[0] === 'Cyan') {
-  if(memberRoleAdd.roles.has(roleCyanColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleCyanColor).catch(console.error);
-}
-if(args[0] === 'DarkGreenColor') {
-  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleDarkGreenColor).catch(console.error);
-}
-if(args[0] === 'DarkGreen') {
-  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleDarkGreenColor).catch(console.error);
-}
-if(args[0] === 'darkgreencolor') {
-  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleDarkGreenColor).catch(console.error);
-}
-if(args[0] === 'darkgreen') {
-  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleDarkGreenColor).catch(console.error);
-}
-if(args[0] === 'GreenColor') {
-  if(memberRoleAdd.roles.has(roleGreenColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleGreenColor).catch(console.error);
-}
-if(args[0] === 'Green') {
-  if(memberRoleAdd.roles.has(roleGreenColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleGreenColor).catch(console.error);
-}
-if(args[0] === 'greencolor') {
-  if(memberRoleAdd.roles.has(roleGreenColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleGreenColor).catch(console.error);
-}
-if(args[0] === 'green') {
-  if(memberRoleAdd.roles.has(roleGreenColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleGreenColor).catch(console.error);
-}
-if(args[0] === 'LightGreenColor') {
-  if(memberRoleAdd.roles.has(roleLightGreenColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleLightGreenColor).catch(console.error);
-}
-if(args[0] === 'LightGreen') {
-  if(memberRoleAdd.roles.has(roleLightGreenColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleLightGreenColor).catch(console.error);
-}
-if(args[0] === 'lightgreencolor') {
-  if(memberRoleAdd.roles.has(roleLightGreenColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleLightGreenColor).catch(console.error);
-}
-if(args[0] === 'lightgreen') {
-  if(memberRoleAdd.roles.has(roleLightGreenColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleLightGreenColor).catch(console.error);
-}
-if(args[0] === 'DarkBlueColor') {
-  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleDarkBlueColor).catch(console.error);
-}
-if(args[0] === 'DarkBlue') {
-  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleDarkBlueColor).catch(console.error);
-}
-if(args[0] === 'darkbluecolor') {
-  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleDarkBlueColor).catch(console.error);
-}
-if(args[0] === 'darkblue') {
-  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleDarkBlueColor).catch(console.error);
-}
-if(args[0] === 'BlueColor') {
-  if(memberRoleAdd.roles.has(roleBlueColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBlueColor).catch(console.error);
-}
-if(args[0] === 'Blue') {
-  if(memberRoleAdd.roles.has(roleBlueColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBlueColor).catch(console.error);
-}
-if(args[0] === 'bluecolor') {
-  if(memberRoleAdd.roles.has(roleBlueColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBlueColor).catch(console.error);
-}
-if(args[0] === 'blue') {
-  if(memberRoleAdd.roles.has(roleBlueColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBlueColor).catch(console.error);
-}
-if(args[0] === 'LightBlueColor') {
-  if(memberRoleAdd.roles.has(roleLightBlueColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleLightBlueColor).catch(console.error);
-}
-if(args[0] === 'LightBlue') {
-  if(memberRoleAdd.roles.has(roleLightBlueColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleLightBlueColor).catch(console.error);
-}
-if(args[0] === 'lightbluecolor') {
-  if(memberRoleAdd.roles.has(roleLightBlueColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleLightBlueColor).catch(console.error);
-}
-if(args[0] === 'lightblue') {
-  if(memberRoleAdd.roles.has(roleLightBlueColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleLightBlueColor).catch(console.error);
-}
-if(args[0] === 'BloodRedColor') {
-  if(memberRoleAdd.roles.has(roleBloodRedColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBloodRedColor).catch(console.error);
-}
-if(args[0] === 'BloodRed') {
-  if(memberRoleAdd.roles.has(roleBloodRedColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBloodRedColor).catch(console.error);
-}
-if(args[0] === 'bloodredcolor') {
-  if(memberRoleAdd.roles.has(roleBloodRedColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBloodRedColor).catch(console.error);
-}
-if(args[0] === 'bloodred') {
-  if(memberRoleAdd.roles.has(roleBloodRedColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBloodRedColor).catch(console.error);
-}
-if(args[0] === 'PinkColor') {
-  if(memberRoleAdd.roles.has(rolePinkColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(rolePinkColor).catch(console.error);
-}
-if(args[0] === 'Pink') {
-  if(memberRoleAdd.roles.has(rolePinkColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(rolePinkColor).catch(console.error);
-}
-if(args[0] === 'pinkcolor') {
-  if(memberRoleAdd.roles.has(rolePinkColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(rolePinkColor).catch(console.error);
-}
-if(args[0] === 'pink') {
-  if(memberRoleAdd.roles.has(rolePinkColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(rolePinkColor).catch(console.error);
-}
-if(args[0] === 'PurpleColor') {
-  if(memberRoleAdd.roles.has(rolePurpleColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(rolePurpleColor).catch(console.error);
-}
-if(args[0] === 'Purple') {
-  if(memberRoleAdd.roles.has(rolePurpleColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(rolePurpleColor).catch(console.error);
-}
-if(args[0] === 'purplecolor') {
-  if(memberRoleAdd.roles.has(rolePurpleColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(rolePurpleColor).catch(console.error);
-}
-if(args[0] === 'purple') {
-  if(memberRoleAdd.roles.has(rolePurpleColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(rolePurpleColor).catch(console.error);
-}
-if(args[0] === 'SweetPurpleColor') {
-  if(memberRoleAdd.roles.has(roleSweetPurpleColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleSweetPurpleColor).catch(console.error);
-}
-if(args[0] === 'SweetPurple') {
-  if(memberRoleAdd.roles.has(roleSweetPurpleColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleSweetPurpleColor).catch(console.error);
-}
-if(args[0] === 'sweetpurplecolor') {
-  if(memberRoleAdd.roles.has(roleSweetPurpleColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleSweetPurpleColor).catch(console.error);
-}
-if(args[0] === 'sweetpurple') {
-  if(memberRoleAdd.roles.has(roleSweetPurpleColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleSweetPurpleColor).catch(console.error);
-}
-if(args[0] === 'DarkRedColor') {
-  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleDarkRedColor).catch(console.error);
-}
-if(args[0] === 'DarkRed') {
-  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleDarkRedColor).catch(console.error);
-}
-if(args[0] === 'darkredcolor') {
-  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleDarkRedColor).catch(console.error);
-}
-if(args[0] === 'darkred') {
-  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleDarkRedColor).catch(console.error);
-}
-if(args[0] === 'RedColor') {
+if(args[0].toLowerCase() === 'redcolor') {
   if(memberRoleAdd.roles.has(roleRedColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
   memberRoleAdd.addRole(roleRedColor).catch(console.error);
 }
-if(args[0] === 'Red') {
-  if(memberRoleAdd.roles.has(roleRedColor.id)) return message.channel.send(alreadyEmbed);
+if(args[0].toLowerCase() === 'darkredcolor') {
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleRedColor).catch(console.error);
+  memberRoleAdd.addRole(roleDarkRedColor).catch(console.error);
 }
-if(args[0] === 'redcolor') {
-  if(memberRoleAdd.roles.has(roleRedColor.id)) return message.channel.send(alreadyEmbed);
+if(args[0].toLowerCase() === 'pinkcolor') {
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleRedColor).catch(console.error);
+  memberRoleAdd.addRole(rolePinkColor).catch(console.error);
 }
-if(args[0] === 'red') {
-  if(memberRoleAdd.roles.has(roleRedColor.id)) return message.channel.send(alreadyEmbed);
+if(args[0].toLowerCase() === 'hotpinkcolor') {
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleRedColor).catch(console.error);
+  memberRoleAdd.addRole(roleHotPinkColor).catch(console.error);
 }
-if(args[0] === 'BurntOrangeColor') {
-  if(memberRoleAdd.roles.has(roleBurntOrangeColor.id)) return message.channel.send(alreadyEmbed);
+if(args[0].toLowerCase() === 'violetredcolor') {
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBurntOrangeColor).catch(console.error);
+  memberRoleAdd.addRole(roleVioletRedColor).catch(console.error);
 }
-if(args[0] === 'BurntOrange') {
-  if(memberRoleAdd.roles.has(roleBurntOrangeColor.id)) return message.channel.send(alreadyEmbed);
+if(args[0].toLowerCase() === 'lightsalmoncolor') {
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBurntOrangeColor).catch(console.error);
+  memberRoleAdd.addRole(roleLightSalmonColor).catch(console.error);
 }
-if(args[0] === 'burntorangecolor') {
-  if(memberRoleAdd.roles.has(roleBurntOrangeColor.id)) return message.channel.send(alreadyEmbed);
+if(args[0].toLowerCase() === 'orangeredcolor') {
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBurntOrangeColor).catch(console.error);
+  memberRoleAdd.addRole(roleOrangeRedColor).catch(console.error);
 }
-if(args[0] === 'burntorange') {
-  if(memberRoleAdd.roles.has(roleBurntOrangeColor.id)) return message.channel.send(alreadyEmbed);
+if(args[0].toLowerCase() === 'darkorangecolor') {
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBurntOrangeColor).catch(console.error);
+  memberRoleAdd.addRole(roleDarkOrangeColor).catch(console.error);
 }
-if(args[0] === 'OrangeColor') {
-  if(memberRoleAdd.roles.has(roleOrangeColor.id)) return message.channel.send(alreadyEmbed);
+if(args[0].toLowerCase() === 'goldcolor') {
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleOrangeColor).catch(console.error);
+  memberRoleAdd.addRole(roleGoldColor).catch(console.error);
 }
-if(args[0] === 'Orange') {
-  if(memberRoleAdd.roles.has(roleOrangeColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleOrangeColor).catch(console.error);
-}
-if(args[0] === 'orangecolor') {
-  if(memberRoleAdd.roles.has(roleOrangeColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleOrangeColor).catch(console.error);
-}
-if(args[0] === 'orange') {
-  if(memberRoleAdd.roles.has(roleOrangeColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleOrangeColor).catch(console.error);
-}
-if(args[0] === 'YellowColor') {
+if(args[0].toLowerCase() === 'yellowcolor') {
   if(memberRoleAdd.roles.has(roleYellowColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
   memberRoleAdd.addRole(roleYellowColor).catch(console.error);
 }
-if(args[0] === 'Yellow') {
-  if(memberRoleAdd.roles.has(roleYellowColor.id)) return message.channel.send(alreadyEmbed);
+if(args[0].toLowerCase() === 'moccasincolor') {
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleYellowColor).catch(console.error);
+  memberRoleAdd.addRole(roleMoccasinColor).catch(console.error);
 }
-if(args[0] === 'yellowcolor') {
-  if(memberRoleAdd.roles.has(roleYellowColor.id)) return message.channel.send(alreadyEmbed);
+if(args[0].toLowerCase() === 'khakicolor') {
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleYellowColor).catch(console.error);
+  memberRoleAdd.addRole(roleKhakiColor).catch(console.error);
 }
-if(args[0] === 'yellow') {
-  if(memberRoleAdd.roles.has(roleYellowColor.id)) return message.channel.send(alreadyEmbed);
+if(args[0].toLowerCase() === 'darkkhakicolor') {
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleYellowColor).catch(console.error);
+  memberRoleAdd.addRole(roleDarkKhakiColor).catch(console.error);
 }
-if(args[0] === 'BlackColor') {
+if(args[0].toLowerCase() === 'violetcolor') {
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleVioletColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'magentacolor') {
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleMagentaColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'mediumorchidcolor') {
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleMediumOrchidColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'bluevioletcolor') {
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleBlueVioletColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'darkmagentacolor') {
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDarkMagentaColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'indigocolor') {
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleIndigoColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'darkslatebluecolor') {
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDarkSlateBlueColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'mediumslatebluecolor') {
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleMediumSlateBlueColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'greenyellowcolor') {
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleGreenYellowColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'limecolor') {
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleLimeColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'limegreencolor') {
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleLimeGreenColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'palegreencolor') {
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(rolePaleGreenColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'springgreencolor') {
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSpringGreenColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'seagreencolor') {
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSeaGreenColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'greencolor') {
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleGreenColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'darkgreencolor') {
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDarkGreenColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'olivecolor') {
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleOliveColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'aquamarinecolor') {
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleAquamarineColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'darkcyancolor') {
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDarkCyanColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'cyancolor') {
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleCyanColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'turquoisecolor') {
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTurquoiseColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'lightcyancolor') {
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleLightCyanColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'cadetbluecolor') {
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleCadetBlueColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'steelbluecolor') {
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSteelBlueColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'powderbluecolor') {
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(rolePowderBlueColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'skybluecolor') {
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSkyBlueColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'deepskybluecolor') {
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDeepSkyBlueColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'dodgerbluecolor') {
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDodgerBlueColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'slatebluecolor') {
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSlateBlueColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'bluecolor') {
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleBlueColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'darkbluecolor') {
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDarkBlueColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'wheatcolor') {
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleWheatColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'burlywoodcolor') {
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleBurlyWoodColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'rosybrowncolor') {
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleRosyBrownColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'sandybrowncolor') {
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSandyBrownColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'goldenrodcolor') {
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleGoldenRodColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'darkgoldenrodcolor') {
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDarkGoldenRodColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'chocolatecolor') {
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleChocolateColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'saddlebrowncolor') {
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSaddleBrownColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'browncolor') {
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleBrownColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'marooncolor') {
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleMaroonColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'whitecolor') {
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleWhiteColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'beigecolor') {
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleBeigeColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'lavenderblushcolor') {
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleLavenderBlushColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'mistyrosecolor') {
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleMistyRoseColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'silvercolor') {
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSilverColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'graycolor') {
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleGrayColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'slategraygolor') {
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSlateGrayColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'darkslategraycolor') {
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDarkSlateGrayColor).catch(console.error);
+}
+if(args[0].toLowerCase() === 'blackcolor') {
   if(memberRoleAdd.roles.has(roleBlackColor.id)) return message.channel.send(alreadyEmbed);
+  if(memberRoleAdd.roles.has(roleBasicColor.id)) memberRoleAdd.removeRole(roleBasicColor);
+  if(memberRoleAdd.roles.has(roleIndianRedColor.id)) memberRoleAdd.removeRole(roleIndianRedColor);
+  if(memberRoleAdd.roles.has(roleCrimsonColor.id)) memberRoleAdd.removeRole(roleCrimsonColor);
+  if(memberRoleAdd.roles.has(roleRedColor.id)) memberRoleAdd.removeRole(roleRedColor);
+  if(memberRoleAdd.roles.has(roleDarkRedColor.id)) memberRoleAdd.removeRole(roleDarkRedColor);
+  if(memberRoleAdd.roles.has(rolePinkColor.id)) memberRoleAdd.removeRole(rolePinkColor);
+  if(memberRoleAdd.roles.has(roleHotPinkColor.id)) memberRoleAdd.removeRole(roleHotPinkColor);
+  if(memberRoleAdd.roles.has(roleVioletRedColor.id)) memberRoleAdd.removeRole(roleVioletRedColor);
+  if(memberRoleAdd.roles.has(roleLightSalmonColor.id)) memberRoleAdd.removeRole(roleLightSalmonColor);
+  if(memberRoleAdd.roles.has(roleOrangeRedColor.id)) memberRoleAdd.removeRole(roleOrangeRedColor);
+  if(memberRoleAdd.roles.has(roleDarkOrangeColor.id)) memberRoleAdd.removeRole(roleDarkOrangeColor);
+  if(memberRoleAdd.roles.has(roleGoldColor.id)) memberRoleAdd.removeRole(roleGoldColor);
+  if(memberRoleAdd.roles.has(roleYellowColor.id)) memberRoleAdd.removeRole(roleYellowColor);
+  if(memberRoleAdd.roles.has(roleMoccasinColor.id)) memberRoleAdd.removeRole(roleMoccasinColor);
+  if(memberRoleAdd.roles.has(roleKhakiColor.id)) memberRoleAdd.removeRole(roleKhakiColor);
+  if(memberRoleAdd.roles.has(roleDarkKhakiColor.id)) memberRoleAdd.removeRole(roleDarkKhakiColor);
+  if(memberRoleAdd.roles.has(roleVioletColor.id)) memberRoleAdd.removeRole(roleVioletColor);
+  if(memberRoleAdd.roles.has(roleMagentaColor.id)) memberRoleAdd.removeRole(roleMagentaColor);
+  if(memberRoleAdd.roles.has(roleMediumOrchidColor.id)) memberRoleAdd.removeRole(roleMediumOrchidColor);
+  if(memberRoleAdd.roles.has(roleBlueVioletColor.id)) memberRoleAdd.removeRole(roleBlueVioletColor);
+  if(memberRoleAdd.roles.has(roleDarkMagentaColor.id)) memberRoleAdd.removeRole(roleDarkMagentaColor);
+  if(memberRoleAdd.roles.has(roleIndigoColor.id)) memberRoleAdd.removeRole(roleIndigoColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateBlueColor.id)) memberRoleAdd.removeRole(roleDarkSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleMediumSlateBlueColor.id)) memberRoleAdd.removeRole(roleMediumSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleGreenYellowColor.id)) memberRoleAdd.removeRole(roleGreenYellowColor);
+  if(memberRoleAdd.roles.has(roleLimeColor.id)) memberRoleAdd.removeRole(roleLimeColor);
+  if(memberRoleAdd.roles.has(roleLimeGreenColor.id)) memberRoleAdd.removeRole(roleLimeGreenColor);
+  if(memberRoleAdd.roles.has(rolePaleGreenColor.id)) memberRoleAdd.removeRole(rolePaleGreenColor);
+  if(memberRoleAdd.roles.has(roleSpringGreenColor.id)) memberRoleAdd.removeRole(roleSpringGreenColor);
+  if(memberRoleAdd.roles.has(roleSeaGreenColor.id)) memberRoleAdd.removeRole(roleSeaGreenColor);
+  if(memberRoleAdd.roles.has(roleGreenColor.id)) memberRoleAdd.removeRole(roleGreenColor);
+  if(memberRoleAdd.roles.has(roleDarkGreenColor.id)) memberRoleAdd.removeRole(roleDarkGreenColor);
+  if(memberRoleAdd.roles.has(roleOliveColor.id)) memberRoleAdd.removeRole(roleOliveColor);
+  if(memberRoleAdd.roles.has(roleAquamarineColor.id)) memberRoleAdd.removeRole(roleAquamarineColor);
+  if(memberRoleAdd.roles.has(roleDarkCyanColor.id)) memberRoleAdd.removeRole(roleDarkCyanColor);
+  if(memberRoleAdd.roles.has(roleCyanColor.id)) memberRoleAdd.removeRole(roleCyanColor);
+  if(memberRoleAdd.roles.has(roleTurquoiseColor.id)) memberRoleAdd.removeRole(roleTurquoiseColor);
+  if(memberRoleAdd.roles.has(roleLightCyanColor.id)) memberRoleAdd.removeRole(roleLightCyanColor);
+  if(memberRoleAdd.roles.has(roleCadetBlueColor.id)) memberRoleAdd.removeRole(roleCadetBlueColor);
+  if(memberRoleAdd.roles.has(roleSteelBlueColor.id)) memberRoleAdd.removeRole(roleSteelBlueColor);
+  if(memberRoleAdd.roles.has(rolePowderBlueColor.id)) memberRoleAdd.removeRole(rolePowderBlueColor);
+  if(memberRoleAdd.roles.has(roleSkyBlueColor.id)) memberRoleAdd.removeRole(roleSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDeepSkyBlueColor.id)) memberRoleAdd.removeRole(roleDeepSkyBlueColor);
+  if(memberRoleAdd.roles.has(roleDodgerBlueColor.id)) memberRoleAdd.removeRole(roleDodgerBlueColor);
+  if(memberRoleAdd.roles.has(roleSlateBlueColor.id)) memberRoleAdd.removeRole(roleSlateBlueColor);
+  if(memberRoleAdd.roles.has(roleBlueColor.id)) memberRoleAdd.removeRole(roleBlueColor);
+  if(memberRoleAdd.roles.has(roleDarkBlueColor.id)) memberRoleAdd.removeRole(roleDarkBlueColor);
+  if(memberRoleAdd.roles.has(roleWheatColor.id)) memberRoleAdd.removeRole(roleWheatColor);
+  if(memberRoleAdd.roles.has(roleBurlyWoodColor.id)) memberRoleAdd.removeRole(roleBurlyWoodColor);
+  if(memberRoleAdd.roles.has(roleRosyBrownColor.id)) memberRoleAdd.removeRole(roleRosyBrownColor);
+  if(memberRoleAdd.roles.has(roleSandyBrownColor.id)) memberRoleAdd.removeRole(roleSandyBrownColor);
+  if(memberRoleAdd.roles.has(roleGoldenRodColor.id)) memberRoleAdd.removeRole(roleGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleDarkGoldenRodColor.id)) memberRoleAdd.removeRole(roleDarkGoldenRodColor);
+  if(memberRoleAdd.roles.has(roleChocolateColor.id)) memberRoleAdd.removeRole(roleChocolateColor);
+  if(memberRoleAdd.roles.has(roleSaddleBrownColor.id)) memberRoleAdd.removeRole(roleSaddleBrownColor);
+  if(memberRoleAdd.roles.has(roleBrownColor.id)) memberRoleAdd.removeRole(roleBrownColor);
+  if(memberRoleAdd.roles.has(roleMaroonColor.id)) memberRoleAdd.removeRole(roleMaroonColor);
+  if(memberRoleAdd.roles.has(roleWhiteColor.id)) memberRoleAdd.removeRole(roleWhiteColor);
+  if(memberRoleAdd.roles.has(roleBeigeColor.id)) memberRoleAdd.removeRole(roleBeigeColor);
+  if(memberRoleAdd.roles.has(roleLavenderBlushColor.id)) memberRoleAdd.removeRole(roleLavenderBlushColor);
+  if(memberRoleAdd.roles.has(roleMistyRoseColor.id)) memberRoleAdd.removeRole(roleMistyRoseColor);
+  if(memberRoleAdd.roles.has(roleSilverColor.id)) memberRoleAdd.removeRole(roleSilverColor);
+  if(memberRoleAdd.roles.has(roleGrayColor.id)) memberRoleAdd.removeRole(roleGrayColor);
+  if(memberRoleAdd.roles.has(roleSlateGrayColor.id)) memberRoleAdd.removeRole(roleSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleDarkSlateGrayColor.id)) memberRoleAdd.removeRole(roleDarkSlateGrayColor);
+  if(memberRoleAdd.roles.has(roleBlackColor.id)) memberRoleAdd.removeRole(roleBlackColor);
   message.channel.send(addEmbed);
   memberRoleAdd.addRole(roleBlackColor).catch(console.error);
-}
-if(args[0] === 'Black') {
-  if(memberRoleAdd.roles.has(roleBlackColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBlackColor).catch(console.error);
-}
-if(args[0] === 'blackcolor') {
-  if(memberRoleAdd.roles.has(roleBlackColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBlackColor).catch(console.error);
-}
-if(args[0] === 'black') {
-  if(memberRoleAdd.roles.has(roleBlackColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBlackColor).catch(console.error);
-}
-if(args[0] === 'GreyColor') {
-  if(memberRoleAdd.roles.has(roleGreyColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleGreyColor).catch(console.error);
-}
-if(args[0] === 'Grey') {
-  if(memberRoleAdd.roles.has(roleGreyColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleGreyColor).catch(console.error);
-}
-if(args[0] === 'greycolor') {
-  if(memberRoleAdd.roles.has(roleGreyColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleGreyColor).catch(console.error);
-}
-if(args[0] === 'grey') {
-  if(memberRoleAdd.roles.has(roleGreyColor.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleGreyColor).catch(console.error);
-}
-if(args[0] === 'Male') {
-  if(memberRoleAdd.roles.has(roleMale.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleMale).catch(console.error);
-}
-if(args[0] === 'male') {
-  if(memberRoleAdd.roles.has(roleMale.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleMale).catch(console.error);
-}
-if(args[0] === 'Female') {
-  if(memberRoleAdd.roles.has(roleFemale.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleFemale).catch(console.error);
-}
-if(args[0] === 'female') {
-  if(memberRoleAdd.roles.has(roleFemale.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleFemale).catch(console.error);
-}
-if(args[0] === 'Straight') {
-  if(memberRoleAdd.roles.has(roleStraight.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleStraight).catch(console.error);
-}
-if(args[0] === 'straight') {
-  if(memberRoleAdd.roles.has(roleStraight.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleStraight).catch(console.error);
-}
-if(args[0] === 'Homosexual') {
-  if(memberRoleAdd.roles.has(roleHomosexual.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleHomosexual).catch(console.error);
-}
-if(args[0] === 'homosexual') {
-  if(memberRoleAdd.roles.has(roleHomosexual.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleHomosexual).catch(console.error);
-}
-if(args[0] === 'Bisexual') {
-  if(memberRoleAdd.roles.has(roleBisexual.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBisexual).catch(console.error);
-}
-if(args[0] === 'bisexual') {
-  if(memberRoleAdd.roles.has(roleBisexual.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBisexual).catch(console.error);
-}
-if(args[0] === 'Asexual') {
-  if(memberRoleAdd.roles.has(roleAsexual.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleAsexual).catch(console.error);
-}
-if(args[0] === 'asexual') {
-  if(memberRoleAdd.roles.has(roleAsexual.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleAsexual).catch(console.error);
-}
-if(args[0] === 'Single') {
-  if(memberRoleAdd.roles.has(roleSingle.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleSingle).catch(console.error);
-}
-if(args[0] === 'single') {
-  if(memberRoleAdd.roles.has(roleSingle.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleSingle).catch(console.error);
-}
-if(args[0] === 'Taken') {
-  if(memberRoleAdd.roles.has(roleTaken.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleTaken).catch(console.error);
-}
-if(args[0] === 'taken') {
-  if(memberRoleAdd.roles.has(roleTaken.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleTaken).catch(console.error);
-}
-if(args[0] === 'Dom') {
-  if(memberRoleAdd.roles.has(roleDom.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleDom).catch(console.error);
-}
-if(args[0] === 'dom') {
-  if(memberRoleAdd.roles.has(roleDom.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleDom).catch(console.error);
-}
-if(args[0] === 'Sub') {
-  if(memberRoleAdd.roles.has(roleSub.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleSub).catch(console.error);
-}
-if(args[0] === 'sub') {
-  if(memberRoleAdd.roles.has(roleSub.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleSub).catch(console.error);
-}
-if(args[0] === 'Switch') {
-  if(memberRoleAdd.roles.has(roleSwitch.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleSwitch).catch(console.error);
-}
-if(args[0] === 'switch') {
-  if(memberRoleAdd.roles.has(roleSwitch.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleSwitch).catch(console.error);
-}
-if(args[0] === 'Transgender') {
-  if(memberRoleAdd.roles.has(roleTransgender.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleTransgender).catch(console.error);
-}
-if(args[0] === 'transgender') {
-  if(memberRoleAdd.roles.has(roleTransgender.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleTransgender).catch(console.error);
-}
-if(args[0] === 'Apache') {
-  if (!args[1]) return;
-  if (args[1] === 'Helicopter') {
-  if(memberRoleAdd.roles.has(roleApacheHelicopter.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleApacheHelicopter).catch(console.error);
-}}
-if(args[0] === 'apache') {
-  if (!args[1]) return;
-  if (args[1] === 'helicopter') {
-  if(memberRoleAdd.roles.has(roleApacheHelicopter.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleApacheHelicopter).catch(console.error);
-}}
-if(args[0] === 'Vanilla') {
-  if(memberRoleAdd.roles.has(roleVanilla.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleVanilla).catch(console.error);
-}
-if(args[0] === 'vanilla') {
-  if(memberRoleAdd.roles.has(roleVanilla.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleVanilla).catch(console.error);
-}
-if(args[0] === 'Fetish') {
-  if(memberRoleAdd.roles.has(roleFetish.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleFetish).catch(console.error);
-}
-if(args[0] === 'fetish') {
-  if(memberRoleAdd.roles.has(roleFetish.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleFetish).catch(console.error);
-}
-if(args[0] === 'Ahegao') {
-  if(memberRoleAdd.roles.has(roleAhegao.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleAhegao).catch(console.error);
-}
-if(args[0] === 'ahegao') {
-  if(memberRoleAdd.roles.has(roleAhegao.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleAhegao).catch(console.error);
-}
-if(args[0] === 'Futa') {
-  if(memberRoleAdd.roles.has(roleFuta.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleFuta).catch(console.error);
-}
-if(args[0] === 'futa') {
-  if(memberRoleAdd.roles.has(roleFuta.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleFuta).catch(console.error);
-}
-if(args[0] === 'Tentacles') {
-  if(memberRoleAdd.roles.has(roleTentacles.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleTentacles).catch(console.error);
-}
-if(args[0] === 'tentacles') {
-  if(memberRoleAdd.roles.has(roleTentacles.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleTentacles).catch(console.error);
-}
-if(args[0] === 'Neko') {
-  if(memberRoleAdd.roles.has(roleNeko.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleNeko).catch(console.error);
-}
-if(args[0] === 'neko') {
-  if(memberRoleAdd.roles.has(roleNeko.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleNeko).catch(console.error);
-}
-if(args[0] === 'Loli') {
-  if(memberRoleAdd.roles.has(roleLoli.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleLoli).catch(console.error);
-}
-if(args[0] === 'loli') {
-  if(memberRoleAdd.roles.has(roleLoli.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleLoli).catch(console.error);
-}
-if(args[0] === 'Thicc') {
-  if(memberRoleAdd.roles.has(roleThicc.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleThicc).catch(console.error);
-}
-if(args[0] === 'thicc') {
-  if(memberRoleAdd.roles.has(roleThicc.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleThicc).catch(console.error);
-}
-if(args[0] === 'BDSM') {
-  if(memberRoleAdd.roles.has(roleBDSM.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBDSM).catch(console.error);
-}
-if(args[0] === 'bdsm') {
-  if(memberRoleAdd.roles.has(roleBDSM.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleBDSM).catch(console.error);
-}
-if(args[0] === 'Furry') {
-  if(memberRoleAdd.roles.has(roleFurry.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleFurry).catch(console.error);
-}
-if(args[0] === 'furry') {
-  if(memberRoleAdd.roles.has(roleFurry.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleFurry).catch(console.error);
-}
-if(args[0] === 'Yuri') {
-  if(memberRoleAdd.roles.has(roleYuri.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleYuri).catch(console.error);
-}
-if(args[0] === 'yuri') {
-  if(memberRoleAdd.roles.has(roleYuri.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleYuri).catch(console.error);
-}
-if(args[0] === 'Yaoi') {
-  if(memberRoleAdd.roles.has(roleYaoi.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleYaoi).catch(console.error);
-}
-if(args[0] === 'yaoi') {
-  if(memberRoleAdd.roles.has(roleYaoi.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleYaoi).catch(console.error);
-}
-if(args[0] === 'Level') {
-  if (!args[1]) return;
-  if (args[1] === 'Block') {
-  if(memberRoleAdd.roles.has(roleLevelBlock.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleLevelBlock).catch(console.error);
-}}
-if(args[0] === 'level') {
-  if (!args[1]) return;
-  if (args[1] === 'block') {
-  if(memberRoleAdd.roles.has(roleLevelBlock.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleLevelBlock).catch(console.error);
-}}
-if(args[0] === 'event') {
-  if(memberRoleAdd.roles.has(roleEvent.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleEvent).catch(console.error);
-}
-if(args[0] === 'Event') {
-  if(memberRoleAdd.roles.has(roleEvent.id)) return message.channel.send(alreadyEmbed);
-  message.channel.send(addEmbed);
-  memberRoleAdd.addRole(roleEvent).catch(console.error);
-}
 }
 
+if(args[0].toLowerCase() === 'black') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleYakusokunoNeverland.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleYakusokunoNeverland).catch(console.error);
+}
+if(args[1].toLowerCase() === 'clover') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleYakusokunoNeverland.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleYakusokunoNeverland).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'yakusoku') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleYakusokunoNeverland.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleYakusokunoNeverland).catch(console.error);
+}
+if(args[1].toLowerCase() === 'no') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleYakusokunoNeverland.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleYakusokunoNeverland).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'neverland') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleYakusokunoNeverland.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleYakusokunoNeverland).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'nanatsu') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleNanatsuNoTaizai.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleNanatsuNoTaizai).catch(console.error);
+}
+if(args[1].toLowerCase() === 'no') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleNanatsuNoTaizai.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleNanatsuNoTaizai).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'taizai') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleNanatsuNoTaizai.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleNanatsuNoTaizai).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 're:zero') {
+  if(memberRoleAdd.roles.has(roleReZero.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleReZero).catch(console.error);
+}
+if(args[0].toLowerCase() === 'fairy') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleFairyTail.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleFairyTail).catch(console.error);
+}
+if(args[1].toLowerCase() === 'tail') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleFairyTail.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleFairyTail).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'boku') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleBokuNoHeroAcademia.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleBokuNoHeroAcademia).catch(console.error);
+}
+if(args[1].toLowerCase() === 'no') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleBokuNoHeroAcademia.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleBokuNoHeroAcademia).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'hero') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleBokuNoHeroAcademia.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleBokuNoHeroAcademia).catch(console.error);
+}}
+if(args[3].toLowerCase() === 'academia') {
+  if(!args[4]){
+  if(memberRoleAdd.roles.has(roleBokuNoHeroAcademia.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleBokuNoHeroAcademia).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'gintama') {
+  if(memberRoleAdd.roles.has(roleGintama.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleGintama).catch(console.error);
+}
+if(args[0].toLowerCase() === "jojo's") {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleJoJosBizarreAdventure.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleJoJosBizarreAdventure).catch(console.error);
+}
+if(args[1].toLowerCase() === 'bizarre') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleJoJosBizarreAdventure.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleJoJosBizarreAdventure).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'adventure') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleJoJosBizarreAdventure.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleJoJosBizarreAdventure).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'pokemon') {
+  if(memberRoleAdd.roles.has(rolePokémon.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(rolePokémon).catch(console.error);
+}
+if(args[0].toLowerCase() === 'kobayashi-san') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleKobayashisanChinoMaidDragon.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKobayashisanChinoMaidDragon).catch(console.error);
+}
+if(args[1].toLowerCase() === 'chi') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleKobayashisanChinoMaidDragon.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKobayashisanChinoMaidDragon).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'no') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleKobayashisanChinoMaidDragon.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKobayashisanChinoMaidDragon).catch(console.error);
+}}
+if(args[3].toLowerCase() === 'maid') {
+  if(!args[4]){
+  if(memberRoleAdd.roles.has(roleKobayashisanChinoMaidDragon.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKobayashisanChinoMaidDragon).catch(console.error);
+}}
+if(args[4].toLowerCase() === 'dragon') {
+  if(!args[5]){
+  if(memberRoleAdd.roles.has(roleKobayashisanChinoMaidDragon.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKobayashisanChinoMaidDragon).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'one') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleOnePiece.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleOnePiece).catch(console.error);
+}
+if(args[1].toLowerCase() === 'piece') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleOnePiece.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleOnePiece).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'the') {
+  if(!args[1]) return;
+  if(args[1].toLowerCase() === 'rising') {
+  if(memberRoleAdd.roles.has(roleTheRisingoftheShieldHero.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTheRisingoftheShieldHero).catch(console.error);
+}
+if(args[2].toLowerCase() === 'of') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleTheRisingoftheShieldHero.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTheRisingoftheShieldHero).catch(console.error);
+}}
+if(args[3].toLowerCase() === 'the') {
+  if(!args[4]){
+  if(memberRoleAdd.roles.has(roleTheRisingoftheShieldHero.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTheRisingoftheShieldHero).catch(console.error);
+}}
+if(args[4].toLowerCase() === 'shield') {
+  if(!args[5]){
+  if(memberRoleAdd.roles.has(roleTheRisingoftheShieldHero.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTheRisingoftheShieldHero).catch(console.error);
+}}
+if(args[5].toLowerCase() === 'hero') {
+  if(!args[6]){
+  if(memberRoleAdd.roles.has(roleTheRisingoftheShieldHero.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTheRisingoftheShieldHero).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'naruto') {
+  if(memberRoleAdd.roles.has(roleNaruto.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleNaruto).catch(console.error);
+}
+if(args[0].toLowerCase() === 'darling in the franxx') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleDarlingintheFranXX.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDarlingintheFranXX).catch(console.error);
+}
+if(args[1].toLowerCase() === 'in') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleDarlingintheFranXX.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDarlingintheFranXX).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'the') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleDarlingintheFranXX.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDarlingintheFranXX).catch(console.error);
+}}
+if(args[3].toLowerCase() === 'franxx') {
+  if(!args[4]){
+  if(memberRoleAdd.roles.has(roleDarlingintheFranXX.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDarlingintheFranXX).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'inuyasha') {
+  if(memberRoleAdd.roles.has(roleInuyasha.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleInuyasha).catch(console.error);
+}
+if(args[0].toLowerCase() === 'shingeki') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleShingekinoKyojin.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleShingekinoKyojin).catch(console.error);
+}
+if(args[1].toLowerCase() === 'no') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleShingekinoKyojin.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleShingekinoKyojin).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'kyojin') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleShingekinoKyojin.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleShingekinoKyojin).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'lucky star') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleLuckyStar.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleLuckyStar).catch(console.error);
+}
+if(args[1].toLowerCase() === 'star') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleLuckyStar.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleLuckyStar).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'full') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleFullMetalAlchemist.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleFullMetalAlchemist).catch(console.error);
+}
+if(args[1].toLowerCase() === 'metal') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleFullMetalAlchemist.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleFullMetalAlchemist).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'alchemist') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleFullMetalAlchemist.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleFullMetalAlchemist).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'overlord') {
+  if(memberRoleAdd.roles.has(roleOverlord.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleOverlord).catch(console.error);
+}
+if(args[0].toLowerCase() === 'made') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleMadeInAbyss.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleMadeInAbyss).catch(console.error);
+}
+if(args[1].toLowerCase() === 'in') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleMadeInAbyss.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleMadeInAbyss).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'abyss') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleMadeInAbyss.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleMadeInAbyss).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'dragon') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleDragonBallZ.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDragonBallZ).catch(console.error);
+}
+if(args[1].toLowerCase() === 'ball') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleDragonBallZ.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDragonBallZ).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'z') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleDragonBallZ.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDragonBallZ).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'mob') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleMobPsycho100.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleMobPsycho100).catch(console.error);
+}
+if(args[1].toLowerCase() === 'psycho') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleMobPsycho100.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleMobPsycho100).catch(console.error);
+}}
+if(args[2].toLowerCase() === '100') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleMobPsycho100.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleMobPsycho100).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'one') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleOnePunchMan.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleOnePunchMan).catch(console.error);
+}
+if(args[1].toLowerCase() === 'punch') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleOnePunchMan.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleOnePunchMan).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'man') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleOnePunchMan.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleOnePunchMan).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'azumanga') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleAzumangaDaioh.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleAzumangaDaioh).catch(console.error);
+}
+if(args[1].toLowerCase() === 'daioh') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleAzumangaDaioh.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleAzumangaDaioh).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'noragami') {
+  if(memberRoleAdd.roles.has(roleNoragami.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleNoragami).catch(console.error);
+}
+if(args[0].toLowerCase() === 'tokyo') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleTokyoGhoul.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTokyoGhoul).catch(console.error);
+}
+if(args[1].toLowerCase() === 'ghoul') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleTokyoGhoul.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTokyoGhoul).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'high') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleHighSchoolDxD.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleHighSchoolDxD).catch(console.error);
+}
+if(!args[1].toLowerCase() === 'school') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleHighSchoolDxD.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleHighSchoolDxD).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'dxd') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleHighSchoolDxD.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleHighSchoolDxD).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'yuri!!!') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleYurionIce.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleYurionIce).catch(console.error);
+}
+if(args[1].toLowerCase() === 'on') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleYurionIce.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleYurionIce).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'ice') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleYurionIce.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleYurionIce).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'haikyuu') {
+  if(memberRoleAdd.roles.has(roleHaikyuu.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleHaikyuu).catch(console.error);
+}
+if(args[0].toLowerCase() === 'kuroko') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleKurokonoBasket.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKurokonoBasket).catch(console.error);
+}
+if(args[1].toLowerCase() === 'no') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleKurokonoBasket.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKurokonoBasket).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'basket') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleKurokonoBasket.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKurokonoBasket).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'keijo') {
+  if(memberRoleAdd.roles.has(roleKeijo.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKeijo).catch(console.error);
+}
+if(args[0].toLowerCase() === 'initial') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleInitialD.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleInitialD).catch(console.error);
+}
+if(args[1].toLowerCase() === 'd') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleInitialD.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleInitialD).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'ookami') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleOokamitoKoushinryou.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleOokamitoKoushinryou).catch(console.error);
+}
+if(args[1].toLowerCase() === 'to') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleOokamitoKoushinryou.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleOokamitoKoushinryou).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'koushinryou') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleOokamitoKoushinryou.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleOokamitoKoushinryou).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'drifters') {
+  if(memberRoleAdd.roles.has(roleDrifters.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleDrifters).catch(console.error);
+}
+if(args[0].toLowerCase() === 'k-on') {
+  if(memberRoleAdd.roles.has(roleKOn.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKOn).catch(console.error);
+}
+if(args[0].toLowerCase() === 'mirai') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleMiraiNikki.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleMiraiNikki).catch(console.error);
+}
+if(args[1].toLowerCase() === 'nikki') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleMiraiNikki.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleMiraiNikki).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'hunter') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleHunterxHunter.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleHunterxHunter).catch(console.error);
+}
+if(args[1].toLowerCase() === 'x') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleHunterxHunter.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleHunterxHunter).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'hunter') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleHunterxHunter.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleHunterxHunter).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'food') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleFoodWars.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleFoodWars).catch(console.error);
+}
+if(args[1].toLowerCase() === 'wars') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleFoodWars.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleFoodWars).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'yu-gi-oh') {
+  if(memberRoleAdd.roles.has(roleYuGiOh.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleYuGiOh).catch(console.error);
+}
+if(args[0].toLowerCase() === 'idolm@ster') {
+  if(memberRoleAdd.roles.has(roleIdolmaster.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleIdolmaster).catch(console.error);
+}
+if(args[0].toLowerCase() === 'kantai') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleKantaiCollection.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKantaiCollection).catch(console.error);
+}
+if(args[1].toLowerCase() === 'collection') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleKantaiCollection.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKantaiCollection).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'neptunia') {
+  if(memberRoleAdd.roles.has(roleNeptunia.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleNeptunia).catch(console.error);
+}
+if(args[0].toLowerCase() === 'bang') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleBanGDream.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleBanGDream).catch(console.error);
+}
+if(args[1].toLowerCase() === 'dream') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleBanGDream.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleBanGDream).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'steins;gate') {
+  if(memberRoleAdd.roles.has(roleSteinsGate.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSteinsGate).catch(console.error);
+}
+if(args[0].toLowerCase() === 'code') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleCodeGeass.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleCodeGeass).catch(console.error);
+}
+if(args[1].toLowerCase() === 'geass') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleCodeGeass.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleCodeGeass).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'tengen') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleTengenToppaGurrenLagann.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTengenToppaGurrenLagann).catch(console.error);
+}
+if(args[1].toLowerCase() === 'toppa') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleTengenToppaGurrenLagann.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTengenToppaGurrenLagann).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'gurren') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleTengenToppaGurrenLagann.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTengenToppaGurrenLagann).catch(console.error);
+}}
+if(args[3].toLowerCase() === 'lagann') {
+  if(!args[4]){
+  if(memberRoleAdd.roles.has(roleTengenToppaGurrenLagann.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTengenToppaGurrenLagann).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'cowboy') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleCowboyBebop.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleCowboyBebop).catch(console.error);
+}
+if(args[1].toLowerCase() === 'bebop') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleCowboyBebop.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleCowboyBebop).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'neon') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleNeonGenesisEvangelion.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleNeonGenesisEvangelion).catch(console.error);
+}
+if(args[1].toLowerCase() === 'genesis') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleNeonGenesisEvangelion.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleNeonGenesisEvangelion).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'evangelion') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleNeonGenesisEvangelion.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleNeonGenesisEvangelion).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'guilty') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleGuiltyCrown.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleGuiltyCrown).catch(console.error);
+}
+if(args[1].toLowerCase() === 'crown') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleGuiltyCrown.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleGuiltyCrown).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'suzumiya') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleSuzumiyaHaruhinoYuuutsu.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSuzumiyaHaruhinoYuuutsu).catch(console.error);
+}
+if(args[1].toLowerCase() === 'haruhi') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleSuzumiyaHaruhinoYuuutsu.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSuzumiyaHaruhinoYuuutsu).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'no') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleSuzumiyaHaruhinoYuuutsu.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSuzumiyaHaruhinoYuuutsu).catch(console.error);
+}}
+if(args[3].toLowerCase() === 'yuuutsu') {
+  if(!args[4]){
+  if(memberRoleAdd.roles.has(roleSuzumiyaHaruhinoYuuutsu.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSuzumiyaHaruhinoYuuutsu).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'toradora') {
+  if(memberRoleAdd.roles.has(roleToradora.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleToradora).catch(console.error);
+}
+if(args[0].toLowerCase() === 'kimi') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleKiminoNawa.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKiminoNawa).catch(console.error);
+}
+if(args[1].toLowerCase() === 'no') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleKiminoNawa.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKiminoNawa).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'na') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleKiminoNawa.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKiminoNawa).catch(console.error);
+}}
+if(args[3].toLowerCase() === 'wa') {
+  if(!args[4]){
+  if(memberRoleAdd.roles.has(roleKiminoNawa.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleKiminoNawa).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'sword') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleSwordArtOnline.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSwordArtOnline).catch(console.error);
+}
+if(args[1].toLowerCase() === 'art') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleSwordArtOnline.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSwordArtOnline).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'online') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleSwordArtOnline.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleSwordArtOnline).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'your') {
+  if(!args[1]){
+  if(memberRoleAdd.roles.has(roleYourLieinApril.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleYourLieinApril).catch(console.error);
+}
+if(args[1].toLowerCase() === 'lie') {
+  if(!args[2]){
+  if(memberRoleAdd.roles.has(roleYourLieinApril.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleYourLieinApril).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'in') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleYourLieinApril.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleYourLieinApril).catch(console.error);
+}}
+if(args[3].toLowerCase() === 'april') {
+  if(!args[4]){
+  if(memberRoleAdd.roles.has(roleYourLieinApril.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleYourLieinApril).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'bakemonogatari') {
+  if(memberRoleAdd.roles.has(roleBakemonogatari.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleBakemonogatari).catch(console.error);
+}
+if(args[0].toLowerCase() === 'the') {
+  if(!args[1]) return;
+  if(args[1].toLowerCase() === 'devil') {
+  if(memberRoleAdd.roles.has(roleTheDevilisaPartTimer.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTheDevilisaPartTimer).catch(console.error);
+}
+if(args[2].toLowerCase() === 'is') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleTheDevilisaPartTimer.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTheDevilisaPartTimer).catch(console.error);
+}}
+if(args[3].toLowerCase() === 'a') {
+  if(!args[4]){
+  if(memberRoleAdd.roles.has(roleTheDevilisaPartTimer.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTheDevilisaPartTimer).catch(console.error);
+}}
+if(args[4].toLowerCase() === 'part-timer') {
+  if(!args[5]){
+  if(memberRoleAdd.roles.has(roleTheDevilisaPartTimer.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleTheDevilisaPartTimer).catch(console.error);
+}}}
+if(args[0].toLowerCase() === 'chuunibyou') {
+   if(!args[1]){
+   if(memberRoleAdd.roles.has(roleChuunibyoudemoKoigaShitai.id)) return message.channel.send(alreadyEmbed);
+   message.channel.send(addEmbed);
+   memberRoleAdd.addRole(roleChuunibyoudemoKoigaShitai).catch(console.error);
+}
+  if(args[1].toLowerCase() === 'demo') {
+   if(!args[2]){
+   if(memberRoleAdd.roles.has(roleChuunibyoudemoKoigaShitai.id)) return message.channel.send(alreadyEmbed);
+   message.channel.send(addEmbed);
+   memberRoleAdd.addRole(roleChuunibyoudemoKoigaShitai).catch(console.error);
+}}
+if(args[2].toLowerCase() === 'koi') {
+  if(!args[3]){
+  if(memberRoleAdd.roles.has(roleChuunibyoudemoKoigaShitai.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleChuunibyoudemoKoigaShitai).catch(console.error);
+}}
+if(args[3].toLowerCase() === 'ga') {
+  if(!args[4]){
+  if(memberRoleAdd.roles.has(roleChuunibyoudemoKoigaShitai.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleChuunibyoudemoKoigaShitai).catch(console.error);
+}}
+if(args[4].toLowerCase() === 'shitai') {
+  if(!args[5]){
+  if(memberRoleAdd.roles.has(roleChuunibyoudemoKoigaShitai.id)) return message.channel.send(alreadyEmbed);
+  message.channel.send(addEmbed);
+  memberRoleAdd.addRole(roleChuunibyoudemoKoigaShitai).catch(console.error);
+}}
+}
+if(args[0].toLowerCase() === 'bobobo-bo') {
+   if(!args[1]){
+    if(memberRoleAdd.roles.has(roleBoboboboBobobo.id)) return message.channel.send(alreadyEmbed);
+    message.channel.send(addEmbed);
+    memberRoleAdd.addRole(roleBoboboboBobobo).catch(console.error);
+}
+  if(args[1].toLowerCase() === 'bo-bobo') {
+   if(!args[2]){
+    if(memberRoleAdd.roles.has(roleBoboboboBobobo.id)) return message.channel.send(alreadyEmbed);
+    message.channel.send(addEmbed);
+    memberRoleAdd.addRole(roleBoboboboBobobo).catch(console.error);
+  }}}
+if(args[0].toLowerCase() === 'nichijou') {
+    if(memberRoleAdd.roles.has(roleNichijou.id)) return message.channel.send(alreadyEmbed);
+    message.channel.send(addEmbed);
+    memberRoleAdd.addRole(roleNichijou).catch(console.error);
+  }
+}
 module.exports.help = {
   name: "add"
 }

@@ -6,7 +6,7 @@ let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 module.exports.run = async (bot, message, args) => {
 
    //h!warn @dad bot <reason>
-  if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("Nice try");
+  if(!message.member.hasPermission("MANAGE_MEMBERS")) return messgae.reply("Nice try");
   let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
   if(!wUser) return message.reply("Couldn't find them");
   if(wUser.hasPermission("MANAGE_MESSAGES")) return message.reply("Yeah no");
@@ -30,13 +30,13 @@ module.exports.run = async (bot, message, args) => {
   .addField("Number of Warnings", warns[wUser.id].warns)
   .addField("Reason", reason);
 
-  let warnchannel = message.guild.channels.find(`name`, "ban_mute_reports");
+  let warnchannel = message.guild.channels.find(c => c.name === "ban_mute_reports");
   if(!warnchannel) return message.reply("Couldn't find channel");
 
   warnchannel.send(warnEmbed);
 
   if(warns[wUser.id].warns == 2){
-    let muterole = message.guild.roles.find(`name`, "muted");
+    let muterole = message.guild.roles.find(r => r.name === "muted");
     if(!muterole) return message.reply("Maybe you should create that role first lmao");
 
     let mutetime = "10m";
