@@ -27,7 +27,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 
-  bot.user.setActivity("Anime World", {type: "WATCHING"});
+  bot.user.setActivity("you", {type: "WATCHING"});
 
   //bot.user.setGame("AW Original Bot");
 });
