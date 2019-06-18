@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Banned In", message.channel)
   .addField("Time", message.createdAt)
   .addField("Reason", bReason);
-  let banChannel = message.guild.channels.find(c => c.name === "ban_kick_mute_history");
+  let banChannel = message.guild.channels.find(c => c.name === "other_logs");
   if(!banChannel) return message.channel.send("Can't find incidents channel.");
   let banEmbed2 = new Discord.RichEmbed()
   .setColor("#af0e97")
