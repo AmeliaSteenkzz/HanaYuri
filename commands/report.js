@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
       let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-      if(!args[0]) return message.channel.send("Usage: h!report *@user* reason");
+      if(!args[0]) return message.channel.send("Usage: h!report @user reason");
       if(!rUser) return message.channel.send("Couldn't find user.");
       if(!args[1]) return message.channel.send("Input a reason or explanation for the report");
       let reason = args.join(" ").slice(22);
