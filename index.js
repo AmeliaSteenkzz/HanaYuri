@@ -36,13 +36,9 @@ bot.on("guildMemberAdd", function(member)
 {
   let joinEmbed = new Discord.RichEmbed()
   .setColor("#af0e97")
-  .setImage("https://cdn.discordapp.com/attachments/486583639253975042/589602872157667328/unknown.png")
-  .setDescription("꧁【❦Welcome to Anime World a world of weebs awaits!❦】꧂")
-  .addField("Thank you for joining the Anime World (AW) server!", "Don't forget to read the server rules before heading off to enjoy the community!\nThe rules aren't that complicated, just the straight forward kind of rules you'd expect in any other server.\nSo if you behave yourself, then I'm sure you won't break any rules.")
-  .addField("Our own server bot Hanayuri!", "We've made the bot Hanayuri specifically for the server!\nMeaning that we're the only one on Discord who owns her. She's the one that sent you this message!\nWe are planning on adding more features like an EXP leveling system and coin system to Hanayuri in the near future as well!\nSo stay tuned for more info and new stuff!")
-  .addField("Choose from a mountain of colors!", "You can assign your own color to yourself! There are a whopping 60+ colors available from the get go!\nTo see all these colors for yourself, just use the h!roles command.\nUse the h!add color command to add a color that you like!")
-  .addField("Never miss a chapter!", "We have a handful of manga's that we keep an eye on for new releases!\nThe new releases will be announced in the server, so you never miss a chapter!\nIf your favorite manga is not part of the manga releases group, then feel free to suggest it!\nWe take every suggestion into consideration!")
-  .addField("Thank you for reading my message!", "Please enjoy our community to the fullest!\nIf you're having any problems with anything, feel free to ask any of our staff members!")
+  .setImage("https://cdn.discordapp.com/attachments/486583639253975042/585407019994054656/unknown.png")
+  .setDescription("꧁【❦Kindly go fuck yourself❦】꧂")
+  .addField("From: Martijn")
   .setTimestamp()
   .setFooter("Steenkzzisback💕{Martijn}#7981");
 
@@ -59,38 +55,26 @@ bot.on("guildMemberAdd", function(member)
     //let welcomeMessageChannel = member.guild.channels.find(c => c.id === "588325071798403084");
     //welcomeMessageChannel.send(joinMemberEmbed)
 
-  let memberRole = member.guild.roles.find("id", "588646072927387658");
-  let memberRole2 = member.guild.roles.find("id", "588440032398802944");
-  let memberRole3 = member.guild.roles.find("id", "588646202468466688");
-  let memberRole4 = member.guild.roles.find("id", "588646915734896651");
-  let memberRole5 = member.guild.roles.find("id", "588676211987709952");
+  let memberRole = member.guild.roles.find("id", "536591473211211790");
   member.addRole(memberRole);
-  member.addRole(memberRole2);
-  member.addRole(memberRole3);
-  member.addRole(memberRole4);
-  member.addRole(memberRole5);
 });
 
 bot.on('message', function(message){
 
   if(message.content == '/gamemode 0')
   {
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send('You do not have permission to use this command');
     message.channel.send('Your game mode has been updated to *Survival Mode*');
   }
   if(message.content == '/gamemode 1')
   {
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send('You do not have permission to use this command');
     return message.channel.send('Your game mode has been updated to *Creative Mode*');
   }
   if(message.content == '/gamemode 2')
   {
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send('You do not have permission to use this command');
     return message.channel.send('Your game mode has been updated to *Adventure Mode*');
   }
   if(message.content == '/gamemode 3')
   {
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send('You do not have permission to use this command');
     return message.channel.send('Your game mode has been updated to *Spectator Mode*');
   }
 })
