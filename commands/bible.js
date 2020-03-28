@@ -6,7 +6,6 @@ module.exports.run = async (bot, message, args) => {
   let result = Math.floor((Math.random() * replies.length));
 
   let ballembed = new Discord.RichEmbed()
-  .setAuthor(message.author.tag)
   .setColor("#af0e97")
   .addField("The bible says", replies[result])
 
