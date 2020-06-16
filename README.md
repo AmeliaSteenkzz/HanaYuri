@@ -1,6 +1,5 @@
 # hanayuri
-AnimeWorld original Discord bot
-Link: https://discord.gg/kaVUygM
+Original Discord bot
 Creator: Martijn Steenks
 Discord Username: Steenkzzisback💕{Martijn}#7981
 
