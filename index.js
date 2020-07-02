@@ -38,7 +38,7 @@ bot.on("guildMemberAdd", function(member)
   .setColor("#af0e97")
   .setImage("https://cdn.discordapp.com/attachments/626509854260854814/728342962605522974/welcome.jpg")
   .setDescription("꧁【❦Kindly go fuck yourself❦】꧂")
-  .addField("We do not have any obligation to provide protection to those being hurt by hurtful comments in this server. Everyone acts on their own accord. Neither the owner or moderators, admins or normal members are forced to punish or go against those who are spouting racist, dark, sexist, or any other kind of hateful comments, and are not responsible for them. If you're a sensitive person then it's advised to stay away from this server, or at the very least take precautions when participating. If you choose to ignore this warning then this is at your own risk. You have been warned.")
+  .addField("Enjoy the anime tiddies")
   .setTimestamp()
   .setFooter("Steenkzzisback💕Martijn#0001");
 
@@ -79,275 +79,275 @@ bot.on('message', function(message){
   }
 })
 
-bot.on("guildMemberAdd", async member => {
+// bot.on("guildMemberAdd", async member => {
 
-  let joinicon = member.user.displayAvatarURL;
-  let welcomelogembed = new Discord.RichEmbed()
-  .setAuthor("Member Joined", joinicon)
-  .setColor("#faa0eb")
-  .setThumbnail(member.user.displayAvatarURL)
-  .addField("Username:", `${member} ${member.user.tag}`)
-  .setFooter(`ID: ${member.id}`)
-  .setTimestamp(member.joinedAt);
+//   let joinicon = member.user.displayAvatarURL;
+//   let welcomelogembed = new Discord.RichEmbed()
+//   .setAuthor("Member Joined", joinicon)
+//   .setColor("#faa0eb")
+//   .setThumbnail(member.user.displayAvatarURL)
+//   .addField("Username:", `${member} ${member.user.tag}`)
+//   .setFooter(`ID: ${member.id}`)
+//   .setTimestamp(member.joinedAt);
 
-  let welcomechannel = member.guild.channels.find(c => c.name === "other_logs");
-  welcomechannel.send(welcomelogembed);
- });
+//   let welcomechannel = member.guild.channels.find(c => c.name === "other_logs");
+//   welcomechannel.send(welcomelogembed);
+//  });
 
-bot.on("guildMemberRemove", async member => {
+// bot.on("guildMemberRemove", async member => {
 
-  let joinicon = member.user.displayAvatarURL;
-  let leavelogembed = new Discord.RichEmbed()
-  .setAuthor("Member Left", joinicon)
-  .setColor("#530447")
-  .setThumbnail(member.user.displayAvatarURL)
-  .addField("Username:", `${member} ${member.user.tag}`)
-  .setFooter(`ID: ${member.id}`)
-  .setTimestamp(member.leftAt);
+//   let joinicon = member.user.displayAvatarURL;
+//   let leavelogembed = new Discord.RichEmbed()
+//   .setAuthor("Member Left", joinicon)
+//   .setColor("#530447")
+//   .setThumbnail(member.user.displayAvatarURL)
+//   .addField("Username:", `${member} ${member.user.tag}`)
+//   .setFooter(`ID: ${member.id}`)
+//   .setTimestamp(member.leftAt);
 
-  let leavelogchannel = member.guild.channels.find(c => c.name === "other_logs");
-  leavelogchannel.send(leavelogembed);
-})
+//   let leavelogchannel = member.guild.channels.find(c => c.name === "other_logs");
+//   leavelogchannel.send(leavelogembed);
+// })
 
-bot.on("channelCreate", async channel => {
+// bot.on("channelCreate", async channel => {
 
-  let sicon = channel.guild.iconURL;
-  let channelcreatelogsEmbed = new Discord.RichEmbed()
-  .setAuthor("Channel Created", sicon)
-  .setColor("#ff00d6")
-  .addField("Name:", `${channel}`)
-  .setFooter(`ID: ${channel.id}`)
-  .setTimestamp(channel.createdAt);
+//   let sicon = channel.guild.iconURL;
+//   let channelcreatelogsEmbed = new Discord.RichEmbed()
+//   .setAuthor("Channel Created", sicon)
+//   .setColor("#ff00d6")
+//   .addField("Name:", `${channel}`)
+//   .setFooter(`ID: ${channel.id}`)
+//   .setTimestamp(channel.createdAt);
 
-  let sChannel = channel.guild.channels.find(c => c.name === "other_logs");
-  sChannel.send(channelcreatelogsEmbed);
-})
+//   let sChannel = channel.guild.channels.find(c => c.name === "other_logs");
+//   sChannel.send(channelcreatelogsEmbed);
+// })
 
-bot.on("channelDelete", async channel => {
+// bot.on("channelDelete", async channel => {
 
-  let sicon = channel.guild.iconURL;
-  let channeldeletelogsEmbed = new Discord.RichEmbed()
-  .setAuthor("Channel Deleted", sicon)
-  .setColor("#3b0534")
-  .addField("Name:", `#${channel.name}`)
-  .setFooter(`ID: ${channel.id}`)
-  .setTimestamp(channel.deletedAt);
+//   let sicon = channel.guild.iconURL;
+//   let channeldeletelogsEmbed = new Discord.RichEmbed()
+//   .setAuthor("Channel Deleted", sicon)
+//   .setColor("#3b0534")
+//   .addField("Name:", `#${channel.name}`)
+//   .setFooter(`ID: ${channel.id}`)
+//   .setTimestamp(channel.deletedAt);
 
-  let sChannel = channel.guild.channels.find(c => c.name === "other_logs");
-  sChannel.send(channeldeletelogsEmbed);
-})
+//   let sChannel = channel.guild.channels.find(c => c.name === "other_logs");
+//   sChannel.send(channeldeletelogsEmbed);
+// })
 
-bot.on("channelPinsUpdate", async (channel, time) => {
+// bot.on("channelPinsUpdate", async (channel, time) => {
 
-  let sicon = channel.guild.iconURL;
-  let pinsupdateEmbed = new Discord.RichEmbed()
-  .setAuthor("Pin Updated", sicon)
-  .setColor("#9f5a96")
-  .addField("Channel:", `${channel}`)
-  .setFooter(`ID: ${channel.id}`)
-  .setTimestamp(channel.pinnedAt);
+//   let sicon = channel.guild.iconURL;
+//   let pinsupdateEmbed = new Discord.RichEmbed()
+//   .setAuthor("Pin Updated", sicon)
+//   .setColor("#9f5a96")
+//   .addField("Channel:", `${channel}`)
+//   .setFooter(`ID: ${channel.id}`)
+//   .setTimestamp(channel.pinnedAt);
 
-  let sChannel = channel.guild.channels.find(c => c.name === "other_logs");
-  sChannel.send(pinsupdateEmbed);
-})
+//   let sChannel = channel.guild.channels.find(c => c.name === "other_logs");
+//   sChannel.send(pinsupdateEmbed);
+// })
 
-bot.on("channelUpdate", async (oldChannel, newChannel) => {
+// bot.on("channelUpdate", async (oldChannel, newChannel) => {
 
-  let sicon = oldChannel.guild.iconURL;
-  let channelupdateEmbed = new Discord.RichEmbed()
-  .setAuthor("Channel Updated", sicon)
-  .setColor("#492543")
-  .addField("Before:", oldChannel.name, true)
-  .addField("After:", newChannel, true)
-  .setFooter(`ID: ${newChannel.id}`)
-  .setTimestamp(oldChannel.updatedAt);
+//   let sicon = oldChannel.guild.iconURL;
+//   let channelupdateEmbed = new Discord.RichEmbed()
+//   .setAuthor("Channel Updated", sicon)
+//   .setColor("#492543")
+//   .addField("Before:", oldChannel.name, true)
+//   .addField("After:", newChannel, true)
+//   .setFooter(`ID: ${newChannel.id}`)
+//   .setTimestamp(oldChannel.updatedAt);
 
-  let sChannel = oldChannel.guild.channels.find(c => c.name === "other_logs");
-  sChannel.send(channelupdateEmbed);
-})
+//   let sChannel = oldChannel.guild.channels.find(c => c.name === "other_logs");
+//   sChannel.send(channelupdateEmbed);
+// })
 
-bot.on("clientUserGuildSettingsUpdate", async clientUserGuildSettings => {
+// bot.on("clientUserGuildSettingsUpdate", async clientUserGuildSettings => {
 
-  let sicon = clientUserGuildSettings.guild.iconURL;
-  let guildupdateEmbed = new Discord.RichEmbed()
-  .setAuthor("Server Updated", sicon)
-  .setColor("#af0e97")
-  .addField(`${oldclientUserGuildSettings} -> ${newclientUserGuildSettings}`)
-  .setFooter(`ID: ${clientUserGuildSettings.id}`)
-  .setTimestamp(clientUserGuildSettings.updatedAt);
+//   let sicon = clientUserGuildSettings.guild.iconURL;
+//   let guildupdateEmbed = new Discord.RichEmbed()
+//   .setAuthor("Server Updated", sicon)
+//   .setColor("#af0e97")
+//   .addField(`${oldclientUserGuildSettings} -> ${newclientUserGuildSettings}`)
+//   .setFooter(`ID: ${clientUserGuildSettings.id}`)
+//   .setTimestamp(clientUserGuildSettings.updatedAt);
 
-  let sChannel = clientUserGuildSettings.guild.channels.find(c => c.name === "other_logs");
-  sChannel.send(guildupdateEmbed);
-})
+//   let sChannel = clientUserGuildSettings.guild.channels.find(c => c.name === "other_logs");
+//   sChannel.send(guildupdateEmbed);
+// })
 
-bot.on("emojiCreate", async emoji => {
+// bot.on("emojiCreate", async emoji => {
 
-  let sicon = emoji.guild.iconURL;
-  let emojicreateEmbed = new Discord.RichEmbed()
-  .setAuthor("Emoji Created", sicon)
-  .setColor("#faa0eb")
-  .addField("Name:", emoji.iconURL)
-  .setTimestamp(emoji.createdAt);
+//   let sicon = emoji.guild.iconURL;
+//   let emojicreateEmbed = new Discord.RichEmbed()
+//   .setAuthor("Emoji Created", sicon)
+//   .setColor("#faa0eb")
+//   .addField("Name:", emoji.iconURL)
+//   .setTimestamp(emoji.createdAt);
 
-  let sChannel = emoji.guild.channels.find(c => c.name === "other_logs");
-  sChannel.send(emojicreateEmbed);
-})
+//   let sChannel = emoji.guild.channels.find(c => c.name === "other_logs");
+//   sChannel.send(emojicreateEmbed);
+// })
 
-bot.on("emojiDelete", async emoji => {
+// bot.on("emojiDelete", async emoji => {
 
-  let sicon = emoji.guild.iconURL;
-  let emojideleteEmbed = new Discord.RichEmbed()
-  .setAuthor("Emoji Deleted", sicon)
-  .setColor("#530447")
-  .addField("Name:", emoji)
-  .setTimestamp(emoji.deletedAt);
+//   let sicon = emoji.guild.iconURL;
+//   let emojideleteEmbed = new Discord.RichEmbed()
+//   .setAuthor("Emoji Deleted", sicon)
+//   .setColor("#530447")
+//   .addField("Name:", emoji)
+//   .setTimestamp(emoji.deletedAt);
 
-  let sChannel = emoji.guild.channels.find(c => c.name === "other_logs");
-  sChannel.send(emojideleteEmbed);
-})
+//   let sChannel = emoji.guild.channels.find(c => c.name === "other_logs");
+//   sChannel.send(emojideleteEmbed);
+// })
 
-bot.on("emojiUpdate", async (oldEmoji, newEmoji) => {
+// bot.on("emojiUpdate", async (oldEmoji, newEmoji) => {
 
-  let sicon = newEmoji.guild.iconURL;
-  let emojiupdateEmbed = new Discord.RichEmbed()
-  .setAuthor("Emoji Updated", sicon)
-  .setColor("#af0e97")
-  .addField("Before:", oldEmoji.name)
-  .addField("After:", newEmoji.name)
-  .setTimestamp(oldEmoji.updatedAt);
+//   let sicon = newEmoji.guild.iconURL;
+//   let emojiupdateEmbed = new Discord.RichEmbed()
+//   .setAuthor("Emoji Updated", sicon)
+//   .setColor("#af0e97")
+//   .addField("Before:", oldEmoji.name)
+//   .addField("After:", newEmoji.name)
+//   .setTimestamp(oldEmoji.updatedAt);
 
-  let sChannel = newEmoji.guild.channels.find(c => c.name === "other_logs");
-  sChannel.send(emojiupdateEmbed);
-})
+//   let sChannel = newEmoji.guild.channels.find(c => c.name === "other_logs");
+//   sChannel.send(emojiupdateEmbed);
+// })
 
-bot.on("guildBanAdd", async (guild, user) => {
+// bot.on("guildBanAdd", async (guild, user) => {
 
-  let sicon = guild.iconURL;
-  let guildbanEmbed = new Discord.RichEmbed()
-  .setAuthor("Member Banned", sicon)
-  .setColor("#530447")
-  .setThumbnail(user.displayAvatarURL)
-  .addField("Username:", `${user} ${user.tag}`)
-  .setFooter(`ID: ${user.id}`)
-  .setTimestamp(user.addedAt);
+//   let sicon = guild.iconURL;
+//   let guildbanEmbed = new Discord.RichEmbed()
+//   .setAuthor("Member Banned", sicon)
+//   .setColor("#530447")
+//   .setThumbnail(user.displayAvatarURL)
+//   .addField("Username:", `${user} ${user.tag}`)
+//   .setFooter(`ID: ${user.id}`)
+//   .setTimestamp(user.addedAt);
 
-  let sChannel = guild.channels.find(c => c.name === "other_logs");
-  sChannel.send(guildbanEmbed);
-})
+//   let sChannel = guild.channels.find(c => c.name === "other_logs");
+//   sChannel.send(guildbanEmbed);
+// })
 
-bot.on("guildBanRemove", async (guild, user) => {
+// bot.on("guildBanRemove", async (guild, user) => {
 
-  let sicon = guild.iconURL;
-  let guildunbanEmbed = new Discord.RichEmbed()
-  .setAuthor("Member Unbanned", sicon)
-  .setColor("#faa0eb")
-  .setThumbnail(user.displayAvatarURL)
-  .addField("Username:", `${user} ${user.tag}`)
-  .setFooter(`ID: ${user.id}`)
-  .setTimestamp(user.removedAt);
+//   let sicon = guild.iconURL;
+//   let guildunbanEmbed = new Discord.RichEmbed()
+//   .setAuthor("Member Unbanned", sicon)
+//   .setColor("#faa0eb")
+//   .setThumbnail(user.displayAvatarURL)
+//   .addField("Username:", `${user} ${user.tag}`)
+//   .setFooter(`ID: ${user.id}`)
+//   .setTimestamp(user.removedAt);
 
-  let sChannel = guild.channels.find(c => c.name === "other_logs");
-  sChannel.send(guildunbanEmbed);
-})
+//   let sChannel = guild.channels.find(c => c.name === "other_logs");
+//   sChannel.send(guildunbanEmbed);
+// })
 
-bot.on("guildUpdate", async (oldGuild, newGuild) => {
+// bot.on("guildUpdate", async (oldGuild, newGuild) => {
 
-  let sicon = newGuild.iconURL;
-  let guildupdateEmbed = new Discord.RichEmbed()
-  .setAuthor("Server Updated", sicon)
-  .setColor("#af0e97")
-  .setThumbnail(newGuild.iconURL)
-  .addField("Before:", oldGuild.name)
-  .addField("After:", newGuild.name)
-  .setFooter(`ID: ${oldGuild.id}`)
-  .setTimestamp(oldGuild.updatedAt);
+//   let sicon = newGuild.iconURL;
+//   let guildupdateEmbed = new Discord.RichEmbed()
+//   .setAuthor("Server Updated", sicon)
+//   .setColor("#af0e97")
+//   .setThumbnail(newGuild.iconURL)
+//   .addField("Before:", oldGuild.name)
+//   .addField("After:", newGuild.name)
+//   .setFooter(`ID: ${oldGuild.id}`)
+//   .setTimestamp(oldGuild.updatedAt);
 
-  let sChannel = newGuild.channels.find(c => c.name === "other_logs");
-  sChannel.send(guildupdateEmbed);
-})
+//   let sChannel = newGuild.channels.find(c => c.name === "other_logs");
+//   sChannel.send(guildupdateEmbed);
+// })
 
-bot.on("messageDelete", async message => {
+// bot.on("messageDelete", async message => {
 
-  let sicon = message.author.displayAvatarURL;
-  let messagedeleteEmbed = new Discord.RichEmbed()
-  .setAuthor(`Message Deleted by ${message.author.username}`, sicon)
-  .setColor("#530447")
-  .setThumbnail(message.author.displayAvatarURL)
-  .setDescription(`Deleted in channel ${message.channel}`)
-  .addField("Message:", message)
-  .addField("Original Date:", message.createdAt)
-  .setFooter(`ID: ${message.author.id}`)
-  .setTimestamp(message.deletedAt);
+//   let sicon = message.author.displayAvatarURL;
+//   let messagedeleteEmbed = new Discord.RichEmbed()
+//   .setAuthor(`Message Deleted by ${message.author.username}`, sicon)
+//   .setColor("#530447")
+//   .setThumbnail(message.author.displayAvatarURL)
+//   .setDescription(`Deleted in channel ${message.channel}`)
+//   .addField("Message:", message)
+//   .addField("Original Date:", message.createdAt)
+//   .setFooter(`ID: ${message.author.id}`)
+//   .setTimestamp(message.deletedAt);
 
-  let sChannel = message.guild.channels.find(c => c.name === "message_logs");
-  sChannel.send(messagedeleteEmbed);
-})
+//   let sChannel = message.guild.channels.find(c => c.name === "message_logs");
+//   sChannel.send(messagedeleteEmbed);
+// })
 
-bot.on("messageUpdate", async (oldMessage, newMessage) => {
+// bot.on("messageUpdate", async (oldMessage, newMessage) => {
 
-  if((!oldMessage.content || !newMessage.content) || (oldMessage.content === newMessage.content)) return;
-  if(newMessage.author.bot) return;
-  let sicon = newMessage.author.displayAvatarURL;
-  let messageupdateEmbed = new Discord.RichEmbed()
-  .setAuthor(`Message Edited by ${newMessage.author.username}`, sicon)
-  .setColor("#530447")
-  .setThumbnail(newMessage.author.displayAvatarURL)
-  .setDescription(`Edited in channel ${newMessage.channel}`)
-  .addField("Before", oldMessage)
-  .addField("After", newMessage)
-  .addField("Original Date:", oldMessage.createdAt)
-  .setFooter(`ID: ${newMessage.author.id}`)
-  .setTimestamp(oldMessage.deletedAt);
+//   if((!oldMessage.content || !newMessage.content) || (oldMessage.content === newMessage.content)) return;
+//   if(newMessage.author.bot) return;
+//   let sicon = newMessage.author.displayAvatarURL;
+//   let messageupdateEmbed = new Discord.RichEmbed()
+//   .setAuthor(`Message Edited by ${newMessage.author.username}`, sicon)
+//   .setColor("#530447")
+//   .setThumbnail(newMessage.author.displayAvatarURL)
+//   .setDescription(`Edited in channel ${newMessage.channel}`)
+//   .addField("Before", oldMessage)
+//   .addField("After", newMessage)
+//   .addField("Original Date:", oldMessage.createdAt)
+//   .setFooter(`ID: ${newMessage.author.id}`)
+//   .setTimestamp(oldMessage.deletedAt);
 
-  let sChannel = newMessage.guild.channels.find(c => c.name === "message_logs");
-  sChannel.send(messageupdateEmbed);
-})
+//   let sChannel = newMessage.guild.channels.find(c => c.name === "message_logs");
+//   sChannel.send(messageupdateEmbed);
+// })
 
-bot.on("roleCreate", async role => {
+// bot.on("roleCreate", async role => {
 
-  let sicon = role.guild.iconURL;
-  let rolecreateEmbed = new Discord.RichEmbed()
-  .setAuthor("Role Created", sicon)
-  .setColor("#ff00d6")
-  .setThumbnail(role.guild.iconURL)
-  .addField("Role Name", role)
-  .setFooter(`ID: ${role.id}`)
-  .setTimestamp(role.createdAt);
+//   let sicon = role.guild.iconURL;
+//   let rolecreateEmbed = new Discord.RichEmbed()
+//   .setAuthor("Role Created", sicon)
+//   .setColor("#ff00d6")
+//   .setThumbnail(role.guild.iconURL)
+//   .addField("Role Name", role)
+//   .setFooter(`ID: ${role.id}`)
+//   .setTimestamp(role.createdAt);
 
-  let sChannel = role.guild.channels.find(c => c.name === "other_logs");
-  sChannel.send(rolecreateEmbed);
-})
+//   let sChannel = role.guild.channels.find(c => c.name === "other_logs");
+//   sChannel.send(rolecreateEmbed);
+// })
 
-bot.on("roleDelete", async role => {
+// bot.on("roleDelete", async role => {
 
-  let sicon = role.guild.iconURL;
-  let roledeleteEmbed = new Discord.RichEmbed()
-  .setAuthor(`Role Created`, sicon)
-  .setColor("#ff00d6")
-  .setThumbnail(role.guild.iconURL)
-  .addField("Role Name", role)
-  .setFooter(`ID: ${role.id}`)
-  .setTimestamp(role.deletedAt);
+//   let sicon = role.guild.iconURL;
+//   let roledeleteEmbed = new Discord.RichEmbed()
+//   .setAuthor(`Role Created`, sicon)
+//   .setColor("#ff00d6")
+//   .setThumbnail(role.guild.iconURL)
+//   .addField("Role Name", role)
+//   .setFooter(`ID: ${role.id}`)
+//   .setTimestamp(role.deletedAt);
 
-  let sChannel = role.guild.channels.find(c => c.name === "other_logs");
-  sChannel.send(roledeleteEmbed);
-})
+//   let sChannel = role.guild.channels.find(c => c.name === "other_logs");
+//   sChannel.send(roledeleteEmbed);
+// })
 
-bot.on("roleUpdate", async (oldRole, newRole) => {
+// bot.on("roleUpdate", async (oldRole, newRole) => {
 
-  let sicon = newRole.guild.iconURL;
-  let roleupdateEmbed = new Discord.RichEmbed()
-  .setAuthor(`Role Updated`, sicon)
-  .setColor("#ff00d6")
-  .setThumbnail(newRole.guild.iconURL)
-  .addField("Old Role Name:", oldRole.name)
-  .addField("New Role Name:", newRole.name)
-  .setFooter(`ID: ${newRole.id}`)
-  .setTimestamp(oldRole.updatedAt);
+//   let sicon = newRole.guild.iconURL;
+//   let roleupdateEmbed = new Discord.RichEmbed()
+//   .setAuthor(`Role Updated`, sicon)
+//   .setColor("#ff00d6")
+//   .setThumbnail(newRole.guild.iconURL)
+//   .addField("Old Role Name:", oldRole.name)
+//   .addField("New Role Name:", newRole.name)
+//   .setFooter(`ID: ${newRole.id}`)
+//   .setTimestamp(oldRole.updatedAt);
 
-  let sChannel = newRole.guild.channels.find(c => c.name === "other_logs");
-  sChannel.send(roleupdateEmbed);
-})
+//   let sChannel = newRole.guild.channels.find(c => c.name === "other_logs");
+//   sChannel.send(roleupdateEmbed);
+// })
 
 bot.on("message", async message => {
 
