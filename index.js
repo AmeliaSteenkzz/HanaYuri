@@ -36,11 +36,11 @@ bot.on("guildMemberAdd", function(member)
 {
   let joinEmbed = new Discord.RichEmbed()
   .setColor("#af0e97")
-  .setImage("https://cdn.discordapp.com/attachments/486583639253975042/585407019994054656/unknown.png")
+  .setImage("https://cdn.discordapp.com/attachments/486583639253975042/728333076773470209/video0-1.mp4")
   .setDescription("꧁【❦Kindly go fuck yourself❦】꧂")
   .addField("From: Martijn")
   .setTimestamp()
-  .setFooter("Steenkzzisback💕{Martijn}#7981");
+  .setFooter("Steenkzzisback💕Martijn#0001");
 
    member.send(joinEmbed);
 
