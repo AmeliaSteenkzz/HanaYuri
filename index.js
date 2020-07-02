@@ -90,7 +90,7 @@ bot.on("guildMemberAdd", async member => {
   .setFooter(`ID: ${member.id}`)
   .setTimestamp(member.joinedAt);
 
-  let welcomechannel = member.guild.channels.find(c => c.name === "staff_bot_commands");
+  let welcomechannel = member.guild.channels.find(c => c.name === "other_logs");
   welcomechannel.send(welcomelogembed);
  });
 
@@ -105,7 +105,7 @@ bot.on("guildMemberRemove", async member => {
   .setFooter(`ID: ${member.id}`)
   .setTimestamp(member.leftAt);
 
-  let leavelogchannel = member.guild.channels.find(c => c.name === "staff_bot_commands");
+  let leavelogchannel = member.guild.channels.find(c => c.name === "other_logs");
   leavelogchannel.send(leavelogembed);
 })
 
@@ -119,7 +119,7 @@ bot.on("channelCreate", async channel => {
   .setFooter(`ID: ${channel.id}`)
   .setTimestamp(channel.createdAt);
 
-  let sChannel = channel.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = channel.guild.channels.find(c => c.name === "other_logs");
   sChannel.send(channelcreatelogsEmbed);
 })
 
@@ -133,7 +133,7 @@ bot.on("channelDelete", async channel => {
   .setFooter(`ID: ${channel.id}`)
   .setTimestamp(channel.deletedAt);
 
-  let sChannel = channel.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = channel.guild.channels.find(c => c.name === "other_logs");
   sChannel.send(channeldeletelogsEmbed);
 })
 
@@ -147,7 +147,7 @@ bot.on("channelPinsUpdate", async (channel, time) => {
   .setFooter(`ID: ${channel.id}`)
   .setTimestamp(channel.pinnedAt);
 
-  let sChannel = channel.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = channel.guild.channels.find(c => c.name === "other_logs");
   sChannel.send(pinsupdateEmbed);
 })
 
@@ -162,7 +162,7 @@ bot.on("channelUpdate", async (oldChannel, newChannel) => {
   .setFooter(`ID: ${newChannel.id}`)
   .setTimestamp(oldChannel.updatedAt);
 
-  let sChannel = oldChannel.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = oldChannel.guild.channels.find(c => c.name === "other_logs");
   sChannel.send(channelupdateEmbed);
 })
 
@@ -176,7 +176,7 @@ bot.on("clientUserGuildSettingsUpdate", async clientUserGuildSettings => {
   .setFooter(`ID: ${clientUserGuildSettings.id}`)
   .setTimestamp(clientUserGuildSettings.updatedAt);
 
-  let sChannel = clientUserGuildSettings.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = clientUserGuildSettings.guild.channels.find(c => c.name === "other_logs");
   sChannel.send(guildupdateEmbed);
 })
 
@@ -189,7 +189,7 @@ bot.on("emojiCreate", async emoji => {
   .addField("Name:", emoji.iconURL)
   .setTimestamp(emoji.createdAt);
 
-  let sChannel = emoji.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = emoji.guild.channels.find(c => c.name === "other_logs");
   sChannel.send(emojicreateEmbed);
 })
 
@@ -202,7 +202,7 @@ bot.on("emojiDelete", async emoji => {
   .addField("Name:", emoji)
   .setTimestamp(emoji.deletedAt);
 
-  let sChannel = emoji.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = emoji.guild.channels.find(c => c.name === "other_logs");
   sChannel.send(emojideleteEmbed);
 })
 
@@ -216,7 +216,7 @@ bot.on("emojiUpdate", async (oldEmoji, newEmoji) => {
   .addField("After:", newEmoji.name)
   .setTimestamp(oldEmoji.updatedAt);
 
-  let sChannel = newEmoji.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = newEmoji.guild.channels.find(c => c.name === "other_logs");
   sChannel.send(emojiupdateEmbed);
 })
 
@@ -231,7 +231,7 @@ bot.on("guildBanAdd", async (guild, user) => {
   .setFooter(`ID: ${user.id}`)
   .setTimestamp(user.addedAt);
 
-  let sChannel = guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = guild.channels.find(c => c.name === "other_logs");
   sChannel.send(guildbanEmbed);
 })
 
@@ -246,7 +246,7 @@ bot.on("guildBanRemove", async (guild, user) => {
   .setFooter(`ID: ${user.id}`)
   .setTimestamp(user.removedAt);
 
-  let sChannel = guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = guild.channels.find(c => c.name === "other_logs");
   sChannel.send(guildunbanEmbed);
 })
 
@@ -262,7 +262,7 @@ bot.on("guildUpdate", async (oldGuild, newGuild) => {
   .setFooter(`ID: ${oldGuild.id}`)
   .setTimestamp(oldGuild.updatedAt);
 
-  let sChannel = newGuild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = newGuild.channels.find(c => c.name === "other_logs");
   sChannel.send(guildupdateEmbed);
 })
 
@@ -279,7 +279,7 @@ bot.on("messageDelete", async message => {
   .setFooter(`ID: ${message.author.id}`)
   .setTimestamp(message.deletedAt);
 
-  let sChannel = message.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = message.guild.channels.find(c => c.name === "message_logs");
   sChannel.send(messagedeleteEmbed);
 })
 
@@ -299,7 +299,7 @@ bot.on("messageUpdate", async (oldMessage, newMessage) => {
   .setFooter(`ID: ${newMessage.author.id}`)
   .setTimestamp(oldMessage.deletedAt);
 
-  let sChannel = newMessage.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = newMessage.guild.channels.find(c => c.name === "message_logs");
   sChannel.send(messageupdateEmbed);
 })
 
@@ -314,7 +314,7 @@ bot.on("roleCreate", async role => {
   .setFooter(`ID: ${role.id}`)
   .setTimestamp(role.createdAt);
 
-  let sChannel = role.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = role.guild.channels.find(c => c.name === "other_logs");
   sChannel.send(rolecreateEmbed);
 })
 
@@ -329,7 +329,7 @@ bot.on("roleDelete", async role => {
   .setFooter(`ID: ${role.id}`)
   .setTimestamp(role.deletedAt);
 
-  let sChannel = role.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = role.guild.channels.find(c => c.name === "other_logs");
   sChannel.send(roledeleteEmbed);
 })
 
@@ -345,7 +345,7 @@ bot.on("roleUpdate", async (oldRole, newRole) => {
   .setFooter(`ID: ${newRole.id}`)
   .setTimestamp(oldRole.updatedAt);
 
-  let sChannel = newRole.guild.channels.find(c => c.name === "staff_bot_commands");
+  let sChannel = newRole.guild.channels.find(c => c.name === "other_logs");
   sChannel.send(roleupdateEmbed);
 })
 
