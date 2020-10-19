@@ -80,10 +80,17 @@ bot.on("message", async message => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
 
-    if (!message.content.startsWith(prefix)) return;
-    let commandfile = bot.commands.get(cmd.slice(prefix.length));
-    if (commandfile) commandfile.run(bot, message, args);
-
+    if (!message.content.startsWith(prefix)) {
+        return;
+    }
+    let commandfile = bot.commands.get(cmd.slice(prefix.length)); //try and get command
+    if (!commandfile) {
+        commandfile = bot.commands.get("person"); //try for a name instead
+        if (!commandfile) {} else {
+            args = cmd.slice(prefix.length);
+        }
+    }
+    commandfile.run(bot, message, args); //run command
 });
 
 bot.login(token).catch(err => console.log(err));
