@@ -1,0 +1,61 @@
+[{
+        "name": "andre",
+        "images": 41,
+        "folder": "./andre/"
+    },
+    {
+        "name": "atsu",
+        "images": 39,
+        "folder": "./atsu/"
+    },
+    {
+        "name": "danae",
+        "images": 20,
+        "folder": "./danae/"
+    },
+    {
+        "name": "jacob",
+        "images": 8,
+        "folder": "./Jacob/"
+    },
+    {
+        "name": "kaz",
+        "images": 20,
+        "folder": "./kaz/"
+    },
+    {
+        "name": "kevin",
+        "images": 50,
+        "folder": "./kevin/"
+    },
+    {
+        "name": "martijn",
+        "images": 34,
+        "folder": "./martijn/"
+    },
+    {
+        "name": "michael",
+        "images": 5,
+        "folder": "./michael/"
+    },
+    {
+        "name": "oca",
+        "images": 14,
+        "folder": "./oca/"
+    },
+    {
+        "name": "ruben",
+        "images": 10,
+        "folder": "./ruben/"
+    },
+    {
+        "name": "steef",
+        "images": 9,
+        "folder": "./steef/"
+    },
+    {
+        "name": "tjerk",
+        "images": 11,
+        "folder": "./Tjerk/"
+    }
+]
