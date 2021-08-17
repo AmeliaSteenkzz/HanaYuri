@@ -57,7 +57,7 @@ function createCommands() { //reads files from the commands folder and (tries) t
         client.commands.set(command.name, command);
     }
 }
-client.login("ODcxNTMzMjg5MjcyMzg5NzUy.YQcsoA.FyJY30WQFIz2xIhB78AdBuRZsc0"); //logs the bot in :)
+client.login(token); //logs the bot in :)
 
 /*
 const botconfig = require("./botconfig.json");
