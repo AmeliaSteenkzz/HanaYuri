@@ -1,0 +1,49 @@
+[{
+        "name": "andre",
+        "folder": "./database/andre/"
+    },
+    {
+        "name": "atsu",
+        "folder": "./database/atsu/"
+    },
+    {
+        "name": "danae",
+        "folder": "./database/danae/"
+    },
+    {
+        "name": "jacob",
+        "folder": "./database/Jacob/"
+    },
+    {
+        "name": "kaz",
+        "folder": "./database/kaz/"
+    },
+    {
+        "name": "kevin",
+        "folder": "./database/kevin/"
+    },
+    {
+        "name": "martijn",
+        "folder": "./database/martijn/"
+    },
+    {
+        "name": "michael",
+        "folder": "./database/michael/"
+    },
+    {
+        "name": "oca",
+        "folder": "./database/oca/"
+    },
+    {
+        "name": "ruben",
+        "folder": "./database/ruben/"
+    },
+    {
+        "name": "steef",
+        "folder": "./database/steef/"
+    },
+    {
+        "name": "tjerk",
+        "folder": "./database/Tjerk/"
+    }
+]
