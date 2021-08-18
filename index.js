@@ -1,12 +1,11 @@
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const fs = require("fs");
-const bot = new Discord.Client({ disableEveryone: true });
-const token = process.env.token;
 const client = new Discord.Client({
     intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES],
 });
-bot.commands = new Discord.Collection();
+const token = process.env.token;
+client.commands = new Discord.Collection();
 
 
 fs.readdir("./commands/", (err, files) => {
@@ -22,19 +21,17 @@ fs.readdir("./commands/", (err, files) => {
     jsfile.forEach((f, i) => {
         let props = require(`./commands/${f}`);
         console.log(`${f} loaded!`);
-        bot.commands.set(props.help.name, props);
+        client.commands.set(props.help.name, props);
     });
 
 });
-bot.on("ready", async() => {
-    console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+client.on("ready", async() => {
+    console.log(`${client.user.username} is online on ${client.guilds.size} servers!`);
 
-    bot.user.setActivity("you", { type: "WATCHING" });
-
-    //bot.user.setGame("AW Original Bot");
+    client.user.setActivity("you", { type: "WATCHING" });
 });
 
-bot.on("guildMemberAdd", function(member) {
+client.on("guildMemberAdd", function(member) {
     let joinEmbed = new Discord.RichEmbed()
         .setColor("#af0e97")
         .setImage("https://cdn.discordapp.com/attachments/626509854260854814/728342962605522974/welcome.jpg")
@@ -49,7 +46,7 @@ bot.on("guildMemberAdd", function(member) {
     member.addRole(memberRole);
 });
 
-bot.on('message', function(message) {
+client.on('message', function(message) {
 
     if (message.content == '/gamemode 0') {
         message.channel.send('Your game mode has been updated to *Survival Mode*');
@@ -65,9 +62,9 @@ bot.on('message', function(message) {
     }
 })
 
-bot.on("message", async message => {
+client.on("message", async message => {
 
-    if (message.author.bot) return;
+    if (message.author.client) return;
     if (message.channel.type === "dm") return;
 
     let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
@@ -86,14 +83,14 @@ bot.on("message", async message => {
     if (!message.content.startsWith(prefix)) {
         return;
     }
-    let commandfile = bot.commands.get(cmd.slice(prefix.length)); //try and get command
+    let commandfile = client.commands.get(cmd.slice(prefix.length)); //try and get command
     if (!commandfile) {
-        commandfile = bot.commands.get("person"); //try for a name instead
+        commandfile = client.commands.get("person"); //try for a name instead
         if (!commandfile) {} else {
             args = cmd.slice(prefix.length);
         }
     }
-    commandfile.run(bot, message, args); //run command
+    commandfile.run(client, message, args); //run command
 });
 
-bot.login(token).catch(err => console.log(err));
+client.login(token).catch(err => console.log(err));
