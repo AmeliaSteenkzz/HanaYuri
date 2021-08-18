@@ -1,6 +1,10 @@
 {
   "name": "hanayuri",
   "version": "1.0.0",
+  "engines": {
+   "node": "16.x",
+   "npm": "7.x"
+}
   "description": "Discord bot",
   "main": "index.js",
   "scripts": {
@@ -12,7 +16,6 @@
     "discord.js": "^13.1.0",
     "ms": "^2.1.1",
     "npm": "^7.20.6",
-    "node": "16.7.0",
     "superagent": "^4.0.0"
     }
 }
