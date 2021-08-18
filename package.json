@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "engines": {
    "node": "16.x",
-   "npm": "7.x"
   },
   "description": "Discord bot",
   "main": "index.js",
@@ -13,8 +12,9 @@
   "author": "Martijn Steenks",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.1.0",
+    "discord.js": "^11.4.2",
     "ms": "^2.1.1",
+    "npm": "^6.3.0",
     "superagent": "^4.0.0"
     }
 }
