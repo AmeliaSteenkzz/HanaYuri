@@ -1,5 +1,7 @@
 const botconfig = require("./botconfig.json");
-const Discord = require("discord.js");
+const Discord = require("discord.js")({
+    intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES],
+});
 const fs = require("fs");
 const bot = new Discord.Client({ disableEveryone: true });
 const token = process.env.token;
