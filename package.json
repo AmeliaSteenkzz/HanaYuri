@@ -1,7 +1,7 @@
 {
   "name": "hanayuri",
   "version": "1.0.0",
-  "description": "Discord bot (Martijn Steenks)",
+  "description": "Discord bot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,9 +9,9 @@
   "author": "Martijn Steenks",
   "license": "ISC",
   "dependencies": {
+    "discord.js": "^13.1.0",
     "ms": "^2.1.1",
-    "discord.js": "^11.4.2",
-    "npm": "^6.3.0",
+    "npm": "^7.20.6",
     "superagent": "^4.0.0"
   }
 }
