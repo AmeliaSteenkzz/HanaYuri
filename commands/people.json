@@ -1,61 +1,61 @@
 [{
         "name": "andre",
-        "images": 41,
-        "folder": "./andre/"
+        "images": 40,
+        "folder": "./database/andre/"
     },
     {
         "name": "atsu",
-        "images": 39,
-        "folder": "./atsu/"
+        "images": 46,
+        "folder": "./database/atsu/"
     },
     {
         "name": "danae",
-        "images": 20,
-        "folder": "./danae/"
+        "images": 24,
+        "folder": "./database/danae/"
     },
     {
         "name": "jacob",
         "images": 8,
-        "folder": "./Jacob/"
+        "folder": "./database/Jacob/"
     },
     {
         "name": "kaz",
         "images": 20,
-        "folder": "./kaz/"
+        "folder": "./database/kaz/"
     },
     {
         "name": "kevin",
-        "images": 50,
-        "folder": "./kevin/"
+        "images": 8,
+        "folder": "./database/kevin/"
     },
     {
         "name": "martijn",
-        "images": 34,
-        "folder": "./martijn/"
+        "images": 39,
+        "folder": "./database/martijn/"
     },
     {
         "name": "michael",
         "images": 5,
-        "folder": "./michael/"
+        "folder": "./database/michael/"
     },
     {
         "name": "oca",
         "images": 14,
-        "folder": "./oca/"
+        "folder": "./database/oca/"
     },
     {
         "name": "ruben",
-        "images": 10,
-        "folder": "./ruben/"
+        "images": 15,
+        "folder": "./database/ruben/"
     },
     {
         "name": "steef",
-        "images": 9,
-        "folder": "./steef/"
+        "images": 17,
+        "folder": "./database/steef/"
     },
     {
         "name": "tjerk",
-        "images": 11,
-        "folder": "./Tjerk/"
+        "images": 19,
+        "folder": "./database/Tjerk/"
     }
 ]

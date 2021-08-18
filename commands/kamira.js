@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
 number = 1;
 imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
 
-message.channel.send ( {files: ["./kamira/" + imageNumber + ".mp4"]} )
+message.channel.send ( {files: ["./database/kamira/" + imageNumber + ".mp4"]} )
 
 
 }
