@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#af0e97")
     .addField(":ping_pong: Pong!", `${ping} ms | ${rounded} seconds.`);
 
-    message.channel.send({embeds: [pingembed]});
+    message.channel.send(pingembed);
   });
 }
 module.exports.help = {
