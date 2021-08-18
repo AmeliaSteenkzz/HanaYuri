@@ -13,9 +13,20 @@ function getPerson(inp) { //inp = "atsu"
 }
 
 function postPerson(index, message) {
-    let number = people[index].images;
-    let imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
-    message.channel.send({ files: [people[index].folder + imageNumber + ".jpg"] })
+    let image;
+    // while (image == null){
+    //     var imageNumber = Math.floor(Math.random() * (number - 1 + 1)) + 1;
+    //     image = people[index].folder + imageNumber + ".jpg";
+    // }
+
+    var allImages = fs.readdirSync("./database/" + people[index].name);
+    console.log(allImages);
+    console.log(allImages.length);
+    let num = Math.floor(Math.random() * (allImages.length - 1 + 1));
+    console.log(num);
+    image = allImages[num];
+
+    message.channel.send({ files: [people[index].folder + image] });
 }
 
 module.exports.run = async(bot, message, args) => {
