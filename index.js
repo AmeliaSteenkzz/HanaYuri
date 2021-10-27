@@ -29,7 +29,7 @@ bot.on("guildMemberAdd", function(member) {
         .setDescription("꧁【❦Kindly go fuck yourself❦】꧂")
         .addField("Enjoy the anime tiddies")
         .setTimestamp()
-        .setFooter("Steenkzzisback💕Martijn#0001");
+        .setFooter("Steenkzz | Martijn#0001");
     member.send(joinEmbed);
     let memberRole = member.guild.roles.find("id", "536591473211211790");
     member.addRole(memberRole);
