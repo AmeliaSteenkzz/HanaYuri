@@ -28,7 +28,7 @@
     },
     {
         "name": "michael",
-        "folder": "./database/Michael/"
+        "folder": "./database/michael/"
     },
     {
         "name": "oca",
@@ -44,6 +44,6 @@
     },
     {
         "name": "tjerk",
-        "folder": "./database/Tjerk/"
+        "folder": "./database/tjerk/"
     }
 ]
